@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Documentation | HavenNest Lodge &amp; Budget Hotel HTML Template</title>
+  <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg" />
+  <link rel="stylesheet" href="docs.css" />
+</head>
+<body>
+
+  <!-- Sidebar Navigation -->
+  <aside class="docs-sidebar">
+    <div class="docs-logo">
+      <img src="../assets/images/logo-icon.svg" width="30" height="30" alt="Logo" />
+      <span>HavenNest Docs</span>
+    </div>
+
+    <div class="docs-nav-group">
+      <div class="docs-nav-heading">Getting Started</div>
+      <ul class="docs-nav-list">
+        <li><a href="#introduction" class="docs-nav-link active">Introduction</a></li>
+        <li><a href="#features" class="docs-nav-link">Key Features</a></li>
+        <li><a href="#structure" class="docs-nav-link">Folder Structure</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-nav-group">
+      <div class="docs-nav-heading">Customization</div>
+      <ul class="docs-nav-list">
+        <li><a href="#branding" class="docs-nav-link">Brand &amp; Contact Info</a></li>
+        <li><a href="#colors" class="docs-nav-link">Colors &amp; Dark Theme</a></li>
+        <li><a href="#fonts" class="docs-nav-link">Typography &amp; Fonts</a></li>
+        <li><a href="#images" class="docs-nav-link">Image Replacement</a></li>
+        <li><a href="#rooms-tariff" class="docs-nav-link">Rooms &amp; Tariffs</a></li>
+        <li><a href="#currency" class="docs-nav-link">Currency Switching</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-nav-group">
+      <div class="docs-nav-heading">Forms &amp; Backend</div>
+      <ul class="docs-nav-list">
+        <li><a href="#enquiry-form" class="docs-nav-link">Booking Enquiry Form</a></li>
+        <li><a href="#formspree" class="docs-nav-link">Formspree Setup</a></li>
+        <li><a href="#emailjs" class="docs-nav-link">EmailJS Setup</a></li>
+        <li><a href="#whatsapp" class="docs-nav-link">WhatsApp Deep-linking</a></li>
+      </ul>
+    </div>
+
+    <div class="docs-nav-group">
+      <div class="docs-nav-heading">Support &amp; Credits</div>
+      <ul class="docs-nav-list">
+        <li><a href="#credits" class="docs-nav-link">Credits &amp; Assets</a></li>
+        <li><a href="#support" class="docs-nav-link">Customer Support</a></li>
+      </ul>
+    </div>
+
+    <div style="margin-top: 2rem;">
+      <a href="../index.html" class="docs-nav-link" style="border: 1px solid var(--docs-border); text-align: center; display: block; font-weight: 700;">
+        &larr; View Live Website
+      </a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="docs-content">
+    <div class="docs-header">
+      <span class="docs-badge">Version 1.0.0 • ThemeForest Ready</span>
+      <h1>HavenNest Lodge HTML Template</h1>
+      <p style="font-size: 1.15rem; color: #64748B;">
+        Comprehensive buyer customization and implementation guide for HavenNest — modern Budget Hotel &amp; Lodge HTML Template.
+      </p>
+    </div>
+
+    <!-- Introduction -->
+    <section id="introduction">
+      <h2>Introduction</h2>
+      <p>
+        Thank you for purchasing <strong>HavenNest Lodge</strong>! This template is a production-ready, clean, lightweight HTML5 template designed specifically for budget hotels, guest lodges, homestays, highway transit stays, and small multi-branch hospitality businesses.
+      </p>
+      <div class="docs-alert">
+        <strong>Zero Build Tool Requirements:</strong> You don’t need Node.js, Webpack, npm, or any compilers to run or edit this website. Simply open any HTML file directly in your browser or upload the files to any web host (Apache, Nginx, cPanel, Vercel, Netlify, or GitHub Pages).
+      </div>
+    </section>
+
+    <!-- Key Features -->
+    <section id="features">
+      <h2>Key Features</h2>
+      <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Original Budget Hotel Aesthetic:</strong> Warm off-white surfaces, deep navy brand base, and warm terracotta accent for CTAs.</li>
+        <li><strong>Interactive Booking Enquiry Form:</strong> Real-time price estimator, night count calculator, date validation, and reference ID generation.</li>
+        <li><strong>Direct WhatsApp Deep-Linking:</strong> One-click button that pre-populates the booking enquiry directly to the lodge’s WhatsApp number.</li>
+        <li><strong>Light &amp; Dark Mode:</strong> Built-in toggle with automatic LocalStorage preference persistence.</li>
+        <li><strong>Full RTL (Right-to-Left) Support:</strong> Native logical CSS properties for Arabic and Hebrew layouts.</li>
+        <li><strong>Accessible Modal &amp; Lightbox:</strong> Interactive photo gallery lightbox with arrow navigation and detailed room modals.</li>
+        <li><strong>Zero Dead Buttons:</strong> Every button, link, stepper, and counter is interactive.</li>
+        <li><strong>Structured SEO Data:</strong> Pre-configured Schema.org LodgingBusiness and ContactPage JSON-LD snippets.</li>
+      </ul>
+    </section>
+
+    <!-- Folder Structure -->
+    <section id="structure">
+      <h2>Folder Structure</h2>
+      <pre><code>havennest-template/
+├── index.html              # Home 1 - Classic Lodge (Hero, Quick Bar & Showcase)
+├── home-2.html             # Home 2 - Transit Hub (Split Hero, Instant Rate Calculator & Travel Style)
+├── rooms.html              # Rooms & Tariff Page with Filters & Modal
+├── facilities.html         # Grouped Facilities & House Rules
+├── blog.html               # Travel Blog & Guides with Search, Filters & Reader Modal
+├── contact.html            # Booking Enquiry Form & Transit Information
+├── 404.html                # Custom Hotel-Themed 404 Page
+├── terms.html              # Stay Policies, Cancellation & Privacy
+├── README.md               # Project Readme
+├── docs/                   # Documentation Folder
+│   ├── index.html          # Documentation Browser
+│   └── docs.css            # Documentation Stylesheet
+└── assets/
+    ├── css/
+    │   └── style.css       # Master Stylesheet with Theme Variables
+    ├── images/
+    │   ├── logo-icon.svg   # Scalable Vector Brand Logo
+    │   └── favicon.svg     # Scalable Vector Browser Favicon
+    └── js/
+        ├── main.js         # App entry, counters & accordion listeners
+        ├── data/
+        │   ├── images.js   # Centralized Image URL Registry
+        │   ├── rooms-data.js # Room Master Database & Pricing
+        │   └── blog-data.js  # Travel Guides & Blog Articles Database
+        └── modules/
+            ├── storage.js      # Safe LocalStorage Wrapper
+            ├── theme.js        # Light/Dark Switcher
+            ├── rtl.js          # RTL / LTR Switcher
+            ├── toast.js        # Notification Toasts
+            ├── modal.js        # Accessible Room Modal
+            ├── lightbox.js     # Full-Screen Gallery Viewer
+            ├── filters.js      # Live Room Sorting & Category Tabs
+            ├── enquiry-form.js # Form validation & Live Price Calculator
+            ├── blog.js         # Live Search, Category Filter & Reader Modal
+            └── navigation.js   # Sticky Nav, Drawer & Currency Switcher</code></pre>
+    </section>
+
+    <!-- Branding -->
+    <section id="branding">
+      <h2>Brand &amp; Contact Info Customization</h2>
+      <p>
+        To update the lodge name, phone numbers, and addresses, update the following files:
+      </p>
+      <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1rem;">
+        <li><strong>Hotel Name &amp; Tagline:</strong> Search for <span class="inline-code">HavenNest</span> in all HTML files and replace with your business name.</li>
+        <li><strong>Social &amp; Login Links:</strong> In the footer of each HTML file, update the Facebook (<span class="inline-code">https://www.facebook.com/login/</span>), Instagram (<span class="inline-code">https://www.instagram.com/accounts/login/</span>), and Twitter (<span class="inline-code">https://twitter.com/i/flow/login</span>) links to your preferred profile or login destinations.</li>
+        <li><strong>Phone Number:</strong> Update the <span class="inline-code">tel:+18004567890</span> links in the footer, contact page, and banners.</li>
+        <li><strong>WhatsApp Number:</strong> In <span class="inline-code">assets/js/modules/enquiry-form.js</span>, change <span class="inline-code">hotelNumber = "919876543210"</span> to your international phone number (without <span class="inline-code">+</span> or hyphens).</li>
+      </ul>
+    </section>
+
+    <!-- Colors & Dark Theme -->
+    <section id="colors">
+      <h2>Colors &amp; Theming Customization</h2>
+      <p>
+        All colors are centralized in <span class="inline-code">assets/css/style.css</span> within the <span class="inline-code">:root</span> block:
+      </p>
+      <pre><code>:root {
+  /* Brand Navy */
+  --brand-navy: #0B253A;
+  --brand-navy-light: #16364F;
+
+  /* Primary Accent (Used for All Main Action Buttons) */
+  --brand-accent: #D96B27;
+  --brand-accent-hover: #BF5A1B;
+
+  /* Surfaces (Light Theme) */
+  --bg-page: #FAF7F2;      /* Warm off-white / cream */
+  --bg-surface: #FFFFFF;   /* Clean white cards */
+}
+
+/* Dark Theme Colors */
+[data-theme="dark"] {
+  --bg-page: #081119;      /* Deep midnight navy */
+  --bg-surface: #101E2B;   /* Elevated dark card */
+}</code></pre>
+    </section>
+
+    <!-- Images -->
+    <section id="images">
+      <h2>Image Replacement</h2>
+      <p>
+        All photography is organized cleanly in a single configuration file: <span class="inline-code">assets/js/data/images.js</span>. You can swap any Unsplash URL with your own local file path (e.g. <span class="inline-code">assets/images/rooms/deluxe.jpg</span>) in this file:
+      </p>
+      <pre><code>const HOTEL_IMAGES = {
+  property: {
+    hero: "assets/images/property/hero.jpg",
+    reception: "assets/images/property/reception.jpg",
+    dining: "assets/images/property/dining.jpg"
+  },
+  rooms: {
+    standardDouble: "assets/images/rooms/standard.jpg",
+    deluxeDouble: "assets/images/rooms/deluxe.jpg"
+  }
+};</code></pre>
+    </section>
+
+    <!-- Rooms & Tariffs -->
+    <section id="rooms-tariff">
+      <h2>Rooms &amp; Tariffs Customization</h2>
+      <p>
+        To change room names, weekday/weekend tariffs, guest capacities, or amenity lists, edit <span class="inline-code">assets/js/data/rooms-data.js</span>. The tariff table, room cards, live filters, and cost estimation will immediately reflect your updates:
+      </p>
+      <pre><code>{
+  id: "standard-double",
+  name: "Standard Double Room",
+  weekdayRate: 32,         // USD
+  weekdayRateINR: 1899,    // INR
+  weekendRate: 36,
+  weekendRateINR: 2099,
+  capacity: 2,
+  bedType: "1 Queen Size Bed",
+  roomSize: "190 sq.ft (18 m²)",
+  // ...
+}</code></pre>
+    </section>
+
+    <!-- Connecting Enquiry Form to Backend -->
+    <section id="enquiry-form">
+      <h2>Connecting The Booking Enquiry Form</h2>
+      <p>
+        By default, the template runs completely client-side. When a guest submits an enquiry:
+      </p>
+      <ol style="list-style: decimal; margin-inline-start: 1.5rem; margin-bottom: 1.5rem;">
+        <li>A unique enquiry reference number (e.g., <span class="inline-code">ENQ-2026-8341</span>) is generated.</li>
+        <li>The enquiry is logged into LocalStorage for reviewer / demo proof.</li>
+        <li>A confirmation summary screen is displayed.</li>
+        <li>A direct <strong>Send via WhatsApp</strong> button is populated with all details pre-formatted.</li>
+      </ol>
+
+      <h3 id="formspree">Option A: Formspree (Free Email Forwarding)</h3>
+      <p>
+        If you want enquiries sent directly to your inbox without writing backend code:
+      </p>
+      <pre><code>&lt;!-- In contact.html: replace &lt;form id="booking-enquiry-form"&gt; with: --&gt;
+&lt;form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST"&gt;
+  &lt;!-- All inputs with name attributes will be forwarded to your email! --&gt;
+&lt;/form&gt;</code></pre>
+
+      <h3 id="emailjs">Option B: EmailJS Integration</h3>
+      <p>
+        To trigger emails directly from client-side JavaScript via your Gmail or Outlook account:
+      </p>
+      <pre><code>// 1. Include EmailJS SDK in contact.html:
+&lt;script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"&gt;&lt;/script&gt;
+
+// 2. In enquiry-form.js inside handleSubmit:
+emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", enquiryRecord, "YOUR_PUBLIC_KEY")
+  .then(() => {
+    Toast.success("Confirmation email dispatched!");
+  });</code></pre>
+
+      <h3 id="whatsapp">Option C: Direct WhatsApp Delivery (Pre-Installed)</h3>
+      <p>
+        Small lodges and guest houses frequently prefer WhatsApp over emails because it allows direct 2-way chat with the guest. This feature is already fully integrated into HavenNest and requires zero third-party subscriptions.
+      </p>
+    </section>
+
+    <!-- Credits -->
+    <section id="credits">
+      <h2>Credits &amp; External Assets</h2>
+      <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1.5rem;">
+        <li><strong>Fonts:</strong> <a href="https://fonts.google.com/specimen/Outfit" target="_blank" rel="noopener">Outfit</a> &amp; <a href="https://fonts.google.com/specimen/Inter" target="_blank" rel="noopener">Inter</a> by Google Fonts.</li>
+        <li><strong>Photography:</strong> Curated high-resolution hospitality photos via <a href="https://unsplash.com" target="_blank" rel="noopener">Unsplash</a>.</li>
+        <li><strong>Icons:</strong> Clean, feather-inspired inline vector SVGs (zero external icon font dependency).</li>
+      </ul>
+    </section>
+
+    <!-- Support -->
+    <section id="support">
+      <h2>Need Help or Customization?</h2>
+      <p>
+        If you have questions regarding this template, feel free to open a ticket via your ThemeForest / TemplateMonster purchase dashboard. We provide rapid support within 24 hours.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>

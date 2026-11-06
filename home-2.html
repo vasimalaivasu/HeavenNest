@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <title>HavenNest - Transit Lodge &amp; Budget Hotel | Fast Check-In &amp; Honest Rates</title>
+  <meta name="description" content="Modern budget hotel &amp; transit lodge located 5 minutes from Central Railway Station. Spotless AC rooms, 24/7 check-in, free Wi-Fi, complimentary morning chai, and luggage cloakroom." />
+  <meta name="keywords" content="transit lodge, budget hotel railway station, cheap rooms near station, day use hotel, 24/7 check in hotel, affordable family lodge" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="HavenNest - Transit Lodge &amp; Budget Hotel | Fast Check-In &amp; Honest Rates" />
+  <meta property="og:description" content="Clean, comfortable rooms 5 minutes from Central Railway Station with zero surge pricing, free extra blankets &amp; morning chai." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://haven-nest-lodge.local/home-2.html" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Google Fonts: Inter (Body) & Plus Jakarta Sans (Headings) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Prevent FOUC: Pre-apply saved Theme & RTL before render -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("haven_theme_mode");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        var rtl = localStorage.getItem("haven_rtl_pref");
+        if (rtl === "true") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION BAR
+       ========================================================================== -->
+  <header class="haven-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-name">HavenNest</span>
+          <span class="brand-tagline">Transit Lodge &amp; Hotel</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav with Home Dropdown -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link nav-dropdown-toggle active" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1 &ndash; Classic Lodge</span>
+              <span class="dropdown-item-desc">Traditional budget hotel &amp; comprehensive room showcase</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item active">
+              <span class="dropdown-item-title">
+                Home 2 &ndash; Transit Hub
+                <span class="dropdown-badge">Popular</span>
+              </span>
+              <span class="dropdown-item-desc">Fast-track booking, live rate calculator &amp; railway transit hub</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="rooms.html" class="nav-link">Rooms &amp; Tariff</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="terms.html" class="nav-link">Policies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Controls & Actions -->
+      <div class="navbar-actions">
+        <!-- Currency Switcher -->
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
+          <span class="curr-label">$ USD</span>
+        </button>
+
+        <!-- LTR / RTL Toggle -->
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch between LTR and RTL">
+          <span class="rtl-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+          </span>
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book Enquiry</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER MENU
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="32" height="32" />
+        <span class="brand-name">HavenNest</span>
+      </a>
+      <button type="button" class="drawer-close mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Mobile Quick Controls -->
+      <div class="drawer-controls-row">
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
+          <span class="curr-label">$ USD</span>
+        </button>
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="drawer-nav-link">Home 1 &ndash; Classic Lodge</a></li>
+        <li><a href="home-2.html" class="drawer-nav-link active" aria-current="page">Home 2 &ndash; Transit Hub</a></li>
+        <li><a href="rooms.html" class="drawer-nav-link">Rooms &amp; Tariff</a></li>
+        <li><a href="facilities.html" class="drawer-nav-link">Facilities</a></li>
+        <li><a href="blog.html" class="drawer-nav-link">Travel Blog &amp; Guides</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact &amp; Enquiry</a></li>
+        <li><a href="terms.html" class="drawer-nav-link">Stay Policies</a></li>
+      </ul>
+    </div>
+    <div class="drawer-footer">
+      <a href="contact.html" class="btn btn-primary btn-block">Send Booking Enquiry</a>
+      <a href="tel:+18004567890" class="btn btn-outline btn-block">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>Call Front Desk</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       SECTION 1: SPLIT HERO WITH LIVE INSTANT RATE CALCULATOR
+       ========================================================================== -->
+  <section class="hero-split-section" aria-labelledby="hero-title">
+    <div class="container hero-split-grid">
+      <!-- Left Column: Copy & Value Proposition -->
+      <div class="hero-split-left">
+        <div class="hero-pill-tag">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span>Fast-Track Transit Lodge &bull; 24/7 Front Desk</span>
+        </div>
+
+        <h1 id="hero-title" class="hero-split-title">
+          Smart Transit Lodging. <br />
+          <span class="accent-text">Fast Check-In, Honest Rates.</span>
+        </h1>
+
+        <p class="hero-split-desc">
+          Located only 5 minutes from Central Railway Station &amp; the Express Flyover. Enjoy spotless AC rooms, 24/7 hot water, high-speed Wi-Fi, safe luggage cloakroom, and hot morning chai &mdash; with zero surge pricing, ever.
+        </p>
+
+        <!-- Perks Chips Row -->
+        <div class="hero-perks-chips">
+          <div class="perk-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Zero Surge Pricing</span>
+          </div>
+          <div class="perk-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>24/7 Flexible Check-In</span>
+          </div>
+          <div class="perk-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <span>Free Cloakroom Holding</span>
+          </div>
+          <div class="perk-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+            <span>Morning Chai &amp; Coffee</span>
+          </div>
+          <div class="perk-chip">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+            <span>Free Extra Pillows &amp; Blankets</span>
+          </div>
+        </div>
+
+        <div class="hero-action-buttons">
+          <a href="#transit-calculator" class="btn btn-primary btn-lg">
+            <span>Calculate Direct Rate</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="rooms.html" class="btn btn-outline btn-lg">
+            <span>View All 8 Room Tariffs</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Live Interactive Instant Rate Calculator -->
+      <div class="hero-calc-card" id="transit-calculator">
+        <div class="hero-calc-header">
+          <div class="hero-calc-header-title">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>Instant Rate Calculator</span>
+          </div>
+          <p class="hero-calc-subtitle">Direct booking estimate with zero commissions &amp; pay on arrival</p>
+        </div>
+
+        <form id="hero-calc-form" novalidate>
+          <div class="calc-fields-grid">
+            <div class="calc-field-group">
+              <label for="h2-checkin">Check-In Date</label>
+              <input type="date" id="h2-checkin" required />
+            </div>
+
+            <div class="calc-field-group">
+              <label for="h2-checkout">Check-Out Date</label>
+              <input type="date" id="h2-checkout" required />
+            </div>
+
+            <div class="calc-field-group">
+              <label for="h2-room-category">Room Category</label>
+              <select id="h2-room-category">
+                <option value="all">All Room Categories</option>
+                <option value="standard" selected>Standard &amp; Budget</option>
+                <option value="deluxe">Deluxe &amp; Suites</option>
+                <option value="family">Family Suites</option>
+                <option value="dormitory">Dormitory &amp; Pods</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <label for="h2-room">Select Room</label>
+              <select id="h2-room" required>
+                <option value="standard-double" data-category="standard" data-usd="32" data-inr="1899" selected>Standard Double Room (AC)</option>
+                <option value="economy-single" data-category="standard" data-usd="24" data-inr="1399">Economy Single Room (Non-AC)</option>
+                <option value="standard-single-ac" data-category="standard" data-usd="28" data-inr="1649">Standard Single Room (AC)</option>
+                <option value="budget-twin" data-category="standard" data-usd="30" data-inr="1799">Budget Twin Room (AC)</option>
+                <option value="triple-sharing" data-category="standard" data-usd="42" data-inr="2599">Triple Sharing Room (AC)</option>
+              </select>
+            </div>
+
+            <!-- Live Animated Scrolling Room Ticker (Full Width) -->
+            <div class="calc-field-group full-width" style="grid-column: 1 / -1; margin-top: -0.25rem;">
+              <div class="room-category-ticker" id="h2-room-ticker" aria-hidden="true">
+                <div class="room-ticker-track" id="h2-ticker-track">
+                  <span class="room-ticker-item" id="h2-ticker-item-1"></span>
+                  <span class="room-ticker-item" id="h2-ticker-item-2"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="calc-field-group">
+              <label for="h2-guests">Guests</label>
+              <select id="h2-guests">
+                <option value="1">1 Adult</option>
+                <option value="2" selected>2 Adults</option>
+                <option value="3">3 Adults</option>
+                <option value="4">4 Adults</option>
+                <option value="5">5+ Adults / Family</option>
+              </select>
+            </div>
+
+            <div class="calc-field-group">
+              <label for="h2-rooms-count">Rooms</label>
+              <select id="h2-rooms-count">
+                <option value="1" selected>1 Room</option>
+                <option value="2">2 Rooms</option>
+                <option value="3">3 Rooms</option>
+                <option value="4">4+ Rooms (Group)</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Addon: Homestyle Breakfast -->
+          <label class="calc-addon-toggle" for="h2-breakfast-toggle">
+            <div class="calc-addon-info">
+              <span class="calc-addon-title">Add Hot Homestyle Breakfast</span>
+              <span class="calc-addon-price" id="calc-bfast-price-label">+ $3 / ₹150 per guest / night</span>
+            </div>
+            <input type="checkbox" id="h2-breakfast-toggle" />
+          </label>
+
+          <!-- Live Breakdown Summary Panel -->
+          <div class="calc-summary-panel">
+            <div class="calc-summary-row">
+              <span>Stay Duration:</span>
+              <strong id="calc-summary-duration">1 Night</strong>
+            </div>
+            <div class="calc-summary-row">
+              <span>Room Base Rate:</span>
+              <span id="calc-summary-room-rate">$32.00</span>
+            </div>
+            <div class="calc-summary-row" id="calc-bfast-row" style="display: none;">
+              <span>Breakfast Add-on:</span>
+              <span id="calc-summary-bfast-rate">+$6.00</span>
+            </div>
+            <div class="calc-summary-total">
+              <span class="calc-summary-total-label">Estimated Direct Total:</span>
+              <div style="text-align: right;">
+                <span class="calc-summary-price" id="calc-summary-grand-total">$32.00</span>
+                <span class="calc-summary-price-note">All taxes included &bull; Direct rate</span>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary calc-submit-btn">
+            <span>Lock Rate &amp; Send Enquiry</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <div class="calc-guarantee-note">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <span>No advance payment needed &bull; Pay at front desk &bull; Free cancellation</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 2: TRANSIT & CONNECTIVITY MATRIX
+       ========================================================================== -->
+  <section class="section bg-surface" aria-labelledby="transit-matrix-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Prime Connectivity</span>
+        <h2 id="transit-matrix-heading" class="section-title">5 Minutes Away From Everything That Matters</h2>
+        <p class="section-subtitle">
+          Whether stepping off a late-night train or catching a morning flight, our strategic central junction eliminates stressful commutes and expensive cab fares.
+        </p>
+      </div>
+
+      <div class="transit-matrix-grid">
+        <!-- Station 1 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="M12 3v8"/><circle cx="8" cy="15" r="1"/><circle cx="16" cy="15" r="1"/><path d="M6 19l-2 2"/><path d="M18 19l2 2"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">5 Mins &bull; 1.2 KM</span>
+            <h3 class="transit-title">Central Railway Junction</h3>
+            <p class="transit-desc">Direct auto-rickshaw &amp; app cab stand right at our entrance. Quick, quiet access even for 2:00 AM arrivals.</p>
+          </div>
+        </div>
+
+        <!-- Station 2 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M6 18v2"/><path d="M18 18v2"/><circle cx="7" cy="14" r="1"/><circle cx="17" cy="14" r="1"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">8 Mins &bull; 2.0 KM</span>
+            <h3 class="transit-title">Inter-State Bus Terminal (ISBT)</h3>
+            <p class="transit-desc">Round-the-clock state transport and private sleeper coach pickups with direct bus shuttle connections.</p>
+          </div>
+        </div>
+
+        <!-- Station 3 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.3c.4-.2.6-.6.5-1.1z"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">25 Mins &bull; 14 KM</span>
+            <h3 class="transit-title">Domestic &amp; Int'l Airport</h3>
+            <p class="transit-desc">Smooth expressway flyover ride. Reception assists with pre-booked reliable airport drop cabs 24/7.</p>
+          </div>
+        </div>
+
+        <!-- Station 4 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">10 Mins &bull; 3.5 KM</span>
+            <h3 class="transit-title">IT Tech Park &amp; Trade Hub</h3>
+            <p class="transit-desc">Fast commute for corporate consultants, interview attendees, and conference visitors seeking quiet rest.</p>
+          </div>
+        </div>
+
+        <!-- Station 5 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">3 Mins &bull; 600 M</span>
+            <h3 class="transit-title">City Hospital &amp; 24/7 Pharmacy</h3>
+            <p class="transit-desc">Walkable access to top multi-specialty care and round-the-clock medical supplies for accompanying relatives.</p>
+          </div>
+        </div>
+
+        <!-- Station 6 -->
+        <div class="transit-matrix-card">
+          <div class="transit-icon-box">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <div class="transit-info-block">
+            <span class="transit-time-pill">12 Mins &bull; 4.2 KM</span>
+            <h3 class="transit-title">Heritage Temple &amp; Lake Garden</h3>
+            <p class="transit-desc">Popular pilgrim destination and serene lakefront promenade for evening relaxation after a long travel day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 3: STAY BY TRAVEL STYLE (INTERACTIVE ROOM SHOWCASE)
+       ========================================================================== -->
+  <section class="section bg-subtle" id="rooms-showcase" aria-labelledby="stay-style-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Rooms &amp; Tariffs</span>
+        <h2 id="stay-style-heading" class="section-title">Designed for Every Travel Itinerary</h2>
+        <p class="section-subtitle">
+          Clean, honest accommodation tailored to solo transits, couples, family pilgrimages, and budget backpackers.
+        </p>
+
+        <!-- Travel Style Filter Tabs with Scrolling Animation -->
+        <div class="room-filter-scroll-container" style="justify-content: center; max-width: 820px; margin-inline: auto; margin-block: 1.5rem 2rem;">
+          <button type="button" class="filter-scroll-btn filter-scroll-prev" id="stay-filter-prev" aria-label="Scroll style tabs left" title="Scroll left">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <div class="room-filter-scroll-track stay-tabs-bar" id="stay-tabs-track" role="tablist" aria-label="Room categories" style="margin-block: 0;">
+            <button type="button" class="stay-tab-btn active" data-style="all" role="tab" aria-selected="true">All Rooms</button>
+            <button type="button" class="stay-tab-btn" data-style="solo" role="tab" aria-selected="false">Solo &amp; Transit</button>
+            <button type="button" class="stay-tab-btn" data-style="couples" role="tab" aria-selected="false">Couples &amp; Duos</button>
+            <button type="button" class="stay-tab-btn" data-style="family" role="tab" aria-selected="false">Families &amp; Groups</button>
+            <button type="button" class="stay-tab-btn" data-style="backpacker" role="tab" aria-selected="false">Backpacker Dorms</button>
+          </div>
+          <button type="button" class="filter-scroll-btn filter-scroll-next" id="stay-filter-next" aria-label="Scroll style tabs right" title="Scroll right">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+          <button type="button" class="filter-scroll-btn filter-autoscroll-toggle" id="stay-autoscroll-toggle" aria-label="Pause auto-scrolling filters" title="Pause auto-scroll">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Room Cards Grid -->
+      <div class="rooms-grid" id="transit-rooms-container">
+        <!-- Room 1: Standard Double (couples, solo) -->
+        <article class="room-card" data-styles="couples solo" data-room-id="standard-double">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1000&q=80" alt="Standard Double Room at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-accent">Best Value</span>
+              <span class="badge badge-success">Available</span>
+            </div>
+            <span class="room-type-tag">AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">Standard Double Room</h3>
+              <p class="room-card-desc">Comfortable queen-bed room featuring air conditioning, 24/7 hot shower, work desk, and fast Wi-Fi.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                2 Adults (Max 3)
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                1 Queen Bed
+              </span>
+              <span class="spec-pill">180 sq.ft</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Split AC</span>
+              <span class="icon-tag">Free 50 Mbps Wi-Fi</span>
+              <span class="icon-tag">24/7 Hot Water</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ Free Morning Chai</span>
+              <span class="room-benefit-tag">🛏️ Extra Pillow on Request</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="standard-double">$32</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="standard-double">Weekend: $36</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="standard-double">View Details</button>
+                <a href="contact.html?room=standard-double" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 2: Economy Single (solo, backpacker) -->
+        <article class="room-card" data-styles="solo backpacker" data-room-id="economy-single">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1000&q=80" alt="Economy Single Room at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-neutral">Budget Pick</span>
+              <span class="badge badge-success">Available</span>
+            </div>
+            <span class="room-type-tag">NON-AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">Economy Single Room</h3>
+              <p class="room-card-desc">Clean, private sanctuary for solo business travelers, job seekers, and overnight railway transit guests.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                1 Adult
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                1 Single Bed
+              </span>
+              <span class="spec-pill">120 sq.ft</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Ceiling Fan</span>
+              <span class="icon-tag">Free 50 Mbps Wi-Fi</span>
+              <span class="icon-tag">Ensuite Bath</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ Free Morning Chai</span>
+              <span class="room-benefit-tag">🛏️ Extra Blanket Included</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="economy-single">$24</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="economy-single">Weekend: $28</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="economy-single">View Details</button>
+                <a href="contact.html?room=economy-single" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 3: Deluxe Double (couples) -->
+        <article class="room-card" data-styles="couples" data-room-id="deluxe-double">
+          <div class="room-card-media">
+            <img src="assets/images/rooms/deluxe-double.jpg" alt="Deluxe Double Room at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-accent">Top Rated</span>
+              <span class="badge badge-success">Available</span>
+            </div>
+            <span class="room-type-tag">AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">Deluxe Double with Balcony</h3>
+              <p class="room-card-desc">Spacious corner room with private balcony view, 43-inch Smart TV, mini fridge, and electric kettle.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                2 Adults (Max 3)
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                1 King Bed
+              </span>
+              <span class="spec-pill">240 sq.ft</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Split AC</span>
+              <span class="icon-tag">Private Balcony</span>
+              <span class="icon-tag">Smart TV &amp; Kettle</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ In-Room Tea / Coffee Kit</span>
+              <span class="room-benefit-tag">🛏️ Extra Pillows &amp; Blankets</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="deluxe-double">$39</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="deluxe-double">Weekend: $45</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="deluxe-double">View Details</button>
+                <a href="contact.html?room=deluxe-double" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 4: Family Quad Suite (family) -->
+        <article class="room-card" data-styles="family" data-room-id="family-room">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80" alt="Family Quad Suite at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-accent">Family Favorite</span>
+              <span class="badge badge-success">Available</span>
+            </div>
+            <span class="room-type-tag">AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">Family Quad Suite</h3>
+              <p class="room-card-desc">Two queen-size beds comfortably accommodating up to 4 adults and 2 children with generous luggage space.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                4 Adults (Max 5)
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                2 Queen Beds
+              </span>
+              <span class="spec-pill">340 sq.ft</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Split AC</span>
+              <span class="icon-tag">24/7 Hot Water</span>
+              <span class="icon-tag">Free 50 Mbps Wi-Fi</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ Family Morning Tea &amp; Coffee</span>
+              <span class="room-benefit-tag">🛏️ Extra Blankets &amp; Pillows</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="family-room">$55</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="family-room">Weekend: $62</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="family-room">View Details</button>
+                <a href="contact.html?room=family-room" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 5: Triple Sharing Room (family, solo) -->
+        <article class="room-card" data-styles="family solo" data-room-id="triple-sharing">
+          <div class="room-card-media">
+            <img src="assets/images/rooms/triple-sharing.jpg" alt="Triple Sharing Room at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-accent">Group Pick</span>
+              <span class="badge badge-success">Available</span>
+            </div>
+            <span class="room-type-tag">AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">Triple Sharing Room</h3>
+              <p class="room-card-desc">Featuring 1 double bed + 1 single bed. Optimal cost-per-person choice for pilgrimage travelers and exam delegates.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                3 Adults
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                1 Double + 1 Single
+              </span>
+              <span class="spec-pill">220 sq.ft</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Split AC</span>
+              <span class="icon-tag">Free 50 Mbps Wi-Fi</span>
+              <span class="icon-tag">24/7 Hot Water</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ Free Morning Chai</span>
+              <span class="room-benefit-tag">🛏️ Extra Pillows on Request</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="triple-sharing">$42</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="triple-sharing">Weekend: $48</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="triple-sharing">View Details</button>
+                <a href="contact.html?room=triple-sharing" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room 6: Dormitory Bunk Bed (backpacker, solo) -->
+        <article class="room-card" data-styles="backpacker solo" data-room-id="dormitory-bed">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?auto=format&fit=crop&w=1000&q=80" alt="AC Dormitory Bed at HavenNest" class="room-card-img" loading="lazy" />
+            <div class="room-card-badges">
+              <span class="badge badge-accent">Backpacker Deal</span>
+              <span class="badge badge-warning">Limited Beds</span>
+            </div>
+            <span class="room-type-tag">AC</span>
+          </div>
+          <div class="room-card-content">
+            <div class="room-card-header">
+              <h3 class="room-card-title">AC Dormitory Bunk Bed</h3>
+              <p class="room-card-desc">Individual bunk bed pod with privacy curtains, reading lamp, private locker, and universal charging outlet.</p>
+            </div>
+            
+            <div class="room-card-specs">
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                1 Guest
+              </span>
+              <span class="spec-pill">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+                1 Single Bunk
+              </span>
+              <span class="spec-pill">Shared Hall</span>
+            </div>
+
+            <div class="room-amenity-icons">
+              <span class="icon-tag">Central AC</span>
+              <span class="icon-tag">Fast 100 Mbps Wi-Fi</span>
+              <span class="icon-tag">Steel Locker</span>
+            </div>
+
+            <div class="room-benefits-row">
+              <span class="room-benefit-tag">☕ Free Morning Tea</span>
+              <span class="room-benefit-tag">🛏️ Fresh Linens &amp; Blanket</span>
+            </div>
+
+            <div class="room-card-footer">
+              <div class="room-price-block">
+                <span class="price-from">Starts from</span>
+                <div class="price-value-row">
+                  <span class="price-amount" data-room-price="dormitory-bed">$12</span>
+                  <span class="price-period">/ night</span>
+                </div>
+                <span class="price-weekend" data-room-weekend="dormitory-bed">Weekend: $14</span>
+              </div>
+              <div class="room-card-actions">
+                <button type="button" class="btn btn-outline-sm" data-modal-room="dormitory-bed">View Details</button>
+                <a href="contact.html?room=dormitory-bed" class="btn btn-primary-sm">Enquire</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top: 3rem;">
+        <a href="rooms.html" class="btn btn-outline btn-lg">
+          <span>Compare All 8 Rooms on Tariff Table</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 4: WHAT EVERY STAY INCLUDES (COMPLIMENTARY COMFORT PERKS)
+       ========================================================================== -->
+  <section class="section bg-surface" aria-labelledby="perks-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Standard Inclusions</span>
+        <h2 id="perks-heading" class="section-title">The Comfort Perks You Actually Care About</h2>
+        <p class="section-subtitle">
+          We believe true hospitality means not nickel-and-diming guests for basic essentials. Every stay at HavenNest includes:
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <!-- Feature 1: Extra Pillows & Blankets -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+          </div>
+          <span class="feature-tag">100% Free on Demand</span>
+          <h3 class="feature-title">Free Extra Pillows &amp; Blankets</h3>
+          <p class="feature-desc">Need a firmer pillow or an extra warm fleece blanket on a chilly night? Just dial reception; housekeeping delivers within 5 minutes at zero cost.</p>
+        </div>
+
+        <!-- Feature 2: Morning Chai & Coffee -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          </div>
+          <span class="feature-tag">Daily 6:30 &ndash; 9:30 AM</span>
+          <h3 class="feature-title">Morning Filter Coffee &amp; Ginger Chai</h3>
+          <p class="feature-desc">Freshly brewed authentic South Indian filter coffee or invigorating ginger masala chai delivered piping hot to your room every morning.</p>
+        </div>
+
+        <!-- Feature 3: Outside Food Friendly -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <span class="feature-tag">Zero Corkage</span>
+          <h3 class="feature-title">Outside Food Welcome + Microwave Hub</h3>
+          <p class="feature-desc">Order through Swiggy, Zomato, or bring local street takeaways. We provide free ceramic plates, bowls, cutlery, and guest microwave heating.</p>
+        </div>
+
+        <!-- Feature 4: Hot Water & Backup -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+          </div>
+          <span class="feature-tag">Solar + Geyser</span>
+          <h3 class="feature-title">24/7 Hot Water &amp; Silent Generator</h3>
+          <p class="feature-desc">Dual solar water heating with electric geyser backups guarantee continuous hot showers. Automatic generator ensures zero power cuts.</p>
+        </div>
+
+        <!-- Feature 5: High Speed Wi-Fi -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+          </div>
+          <span class="feature-tag">100 Mbps Fiber</span>
+          <h3 class="feature-title">High-Speed Wi-Fi on Every Floor</h3>
+          <p class="feature-desc">Dedicated enterprise routers on every floor corridor provide reliable connectivity for zoom meetings, train ticket bookings, and 4K streaming.</p>
+        </div>
+
+        <!-- Feature 6: Free Cloakroom Storage -->
+        <div class="feature-card">
+          <div class="feature-icon-wrap">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <span class="feature-tag">Pre &amp; Post Checkout</span>
+          <h3 class="feature-title">Secure Luggage Cloakroom</h3>
+          <p class="feature-desc">Arrived on a 6:00 AM train or catching an evening 9:00 PM flight? Store your bags safely in our monitored cloakroom while you attend to business.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 5: HOMESTYLE DINING & 24/7 ROOM SERVICE SPLIT
+       ========================================================================== -->
+  <section class="section bg-subtle" aria-labelledby="dining-feature-heading">
+    <div class="container">
+      <div class="dining-feature-split">
+        <!-- Left: Realistic Dining Photography -->
+        <div class="dining-feature-img-box">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" alt="HavenNest clean dining hall and breakfast lounge" loading="lazy" />
+          <div class="dining-badge-float">
+            <span class="icon">🥗</span>
+            <div>
+              <div class="dining-badge-float-title">Fresh, Hygienic &amp; Homestyle</div>
+              <div class="dining-badge-float-sub">Hot meals cooked daily in our verified kitchen</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content & Benefits -->
+        <div class="dining-feature-content">
+          <span class="section-tag">Kitchen &amp; Dining</span>
+          <h2 id="dining-feature-heading" class="section-title">Homestyle Comfort Food Without Overpriced Bills</h2>
+          <p class="section-subtitle" style="margin-block-end: 1rem;">
+            Skip overpriced hotel dining. Enjoy wholesome, comforting meals made fresh with quality ingredients, or feel completely welcome to enjoy outside takeaways in our dining area.
+          </p>
+
+          <div class="dining-benefits-list">
+            <!-- Benefit 1 -->
+            <div class="dining-benefit-item">
+              <div class="dining-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/></svg>
+              </div>
+              <div class="dining-benefit-content">
+                <h4>Hot Morning Breakfast Buffet &amp; Room Delivery ($3 / ₹150)</h4>
+                <p>Steaming idli-vada with coconut chutney, hot aloo parathas with curd, poha, or eggs with buttered toast, served alongside fresh tea or coffee.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 2 -->
+            <div class="dining-benefit-item">
+              <div class="dining-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
+              </div>
+              <div class="dining-benefit-content">
+                <h4>24/7 Midnight Snack &amp; Beverage Pantry</h4>
+                <p>Arrived late? Our front desk pantry serves hot cup noodles, toasted vegetable sandwiches, boiled eggs, biscuits, mineral water, and cold drinks at printed MRP.</p>
+              </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="dining-benefit-item">
+              <div class="dining-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              </div>
+              <div class="dining-benefit-content">
+                <h4>Swiggy / Zomato Friendly with Free Dining Plates</h4>
+                <p>Order food from your favorite local restaurant apps. Reception collects your delivery safely, and our housekeeping brings up clean plates, bowls, and cutlery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 6: SPECIAL TRANSIT & EXTENDED STAY PACKAGES
+       ========================================================================== -->
+  <section class="section bg-surface" aria-labelledby="deals-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Value Packages</span>
+        <h2 id="deals-heading" class="section-title">Special Rates for Transit &amp; Extended Stays</h2>
+        <p class="section-subtitle">
+          Whether you need a quick 6-hour refresh between connecting trains or a week-long medical stay, we offer pre-negotiated direct tariffs.
+        </p>
+      </div>
+
+      <div class="offer-package-grid">
+        <!-- Package 1: Transit Day-Use -->
+        <div class="offer-package-card">
+          <span class="offer-badge">Transit Pass</span>
+          <h3 class="offer-title">6-Hour Day Use Pass</h3>
+          <span class="offer-discount-chip">40% Off Standard Overnight Tariff</span>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Ideal for refreshing between connecting trains or afternoon flight layovers between 9:00 AM and 6:00 PM.
+          </p>
+
+          <ul class="offer-features-list">
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Full private AC room &amp; clean washroom</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Hot shower, fresh towel &amp; soap kit</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Complimentary hot tea or coffee</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>High-speed Wi-Fi &amp; laptop workstation</span>
+            </li>
+          </ul>
+
+          <a href="contact.html?room=standard-double&notes=DayUseTransitPass" class="btn btn-outline btn-block">Enquire Day Pass</a>
+        </div>
+
+        <!-- Package 2: Weekly Corporate / Medical (Featured) -->
+        <div class="offer-package-card featured-package">
+          <span class="offer-badge">Best Long-Stay Deal</span>
+          <h3 class="offer-title">Weekly Stay Pass (7+ Nights)</h3>
+          <span class="offer-discount-chip">Flat 20% Off + Free Daily Breakfast</span>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Designed for business project delegates, exam candidates, and family members accompanying hospital patients.
+          </p>
+
+          <ul class="offer-features-list">
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>20% discount on total room billing</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Complimentary hot breakfast every morning</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Free weekly laundry load (up to 10 pcs)</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Quiet rear room allocation with work desk</span>
+            </li>
+          </ul>
+
+          <a href="contact.html?room=deluxe-double&notes=WeeklyStayPass7Nights" class="btn btn-primary btn-block">Enquire Weekly Pass</a>
+        </div>
+
+        <!-- Package 3: Group & Pilgrimage -->
+        <div class="offer-package-card">
+          <span class="offer-badge">Group Discount</span>
+          <h3 class="offer-title">Group &amp; Pilgrimage Block (4+ Rooms)</h3>
+          <span class="offer-discount-chip">Tiered Volume Rates + Driver Lodging</span>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Seamless coordination for temple pilgrimage tours, family wedding guests, and student sports delegations.
+          </p>
+
+          <ul class="offer-features-list">
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Dedicated contiguous rooms on same floor</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Complimentary dorm bed for hired coach driver</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Free bus/tempo-traveller secure parking</span>
+            </li>
+            <li class="offer-feature-item">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Customized group breakfast timing (5 AM onwards)</span>
+            </li>
+          </ul>
+
+          <a href="contact.html?room=family-room&rooms=4&notes=GroupPilgrimageBooking" class="btn btn-outline btn-block">Request Group Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 7: PROPERTY WALKTHROUGH LIGHTBOX GALLERY
+       ========================================================================== -->
+  <section class="section bg-subtle" aria-labelledby="walkthrough-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Visual Tour</span>
+        <h2 id="walkthrough-heading" class="section-title">See What Your Stay Actually Looks Like</h2>
+        <p class="section-subtitle">
+          Unfiltered, honest photography of our guest rooms, front desk, spotless bathrooms, and lounge. Click any photo for a full-screen view.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Photo 1: Room -->
+        <div class="gallery-item-wrap" data-category="rooms" data-lightbox-src="assets/images/rooms/deluxe-double.jpg" data-lightbox-title="Deluxe Double Room" data-lightbox-caption="Spotless bed linen, air conditioning, and peaceful natural daylight.">
+          <img src="assets/images/rooms/deluxe-double.jpg" alt="Deluxe Double Room" class="gallery-img" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-title">Deluxe Double Room</span>
+            <span class="gallery-meta">AC &bull; King Bed &bull; Ensuite Bath</span>
+          </div>
+        </div>
+
+        <!-- Photo 2: Reception -->
+        <div class="gallery-item-wrap" data-category="reception" data-lightbox-src="assets/images/property/reception.jpg" data-lightbox-title="24/7 Front Desk Reception" data-lightbox-caption="Attentive front desk team welcoming guests at all hours of day and night.">
+          <img src="assets/images/property/reception.jpg" alt="24/7 Front Desk Reception" class="gallery-img" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-title">24/7 Front Desk</span>
+            <span class="gallery-meta">Express Check-in &bull; Cloakroom</span>
+          </div>
+        </div>
+
+        <!-- Photo 3: Bathroom -->
+        <div class="gallery-item-wrap" data-category="bathrooms" data-lightbox-src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" data-lightbox-title="Sanitized Ensuite Bathroom" data-lightbox-caption="Deep-cleaned bathroom with continuous hot water geyser and clean towels.">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80" alt="Sanitized Ensuite Bathroom" class="gallery-img" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-title">Sanitized Bathroom</span>
+            <span class="gallery-meta">24/7 Hot Water Geyser &bull; Clean Towels</span>
+          </div>
+        </div>
+
+        <!-- Photo 4: Dining Lounge -->
+        <div class="gallery-item-wrap" data-category="dining" data-lightbox-src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1200&q=80" data-lightbox-title="Homestyle Breakfast Dining" data-lightbox-caption="Warm, clean dining hall where freshly prepared breakfast and morning chai are served.">
+          <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=600&q=80" alt="Homestyle Breakfast Dining" class="gallery-img" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-title">Dining &amp; Lounge</span>
+            <span class="gallery-meta">Hot Breakfast &bull; Outside Food OK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 8: VERIFIED GUEST TRANSIT REVIEWS
+       ========================================================================== -->
+  <section class="section bg-surface" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="section-header text-center">
+        <span class="section-tag">Guest Experiences</span>
+        <h2 id="reviews-heading" class="section-title">What Transit Travelers Say About HavenNest</h2>
+        <p class="section-subtitle">
+          Real feedback from travelers who booked our rooms for late train arrivals, business layovers, and family stays.
+        </p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Review 1 -->
+        <div class="testimonial-card">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-text">
+            “My train reached the junction at 1:45 AM, well past midnight. I had booked via their quick enquiry. The reception was alert, check-in was finished in under 2 minutes, and the hot geyser shower was heaven. The extra fleece blanket was delivered with a smile.”
+          </p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80" alt="Sumanth Rao" class="testi-avatar" loading="lazy" />
+            <div>
+              <h4 class="testi-name">Sumanth Rao</h4>
+              <span class="testi-role">Corporate Transit (Mumbai to Chennai)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="testimonial-card">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-text">
+            “Stayed for 4 nights during my sister’s surgery at the city hospital down the street. The rooms were spotless, no street noise, and having free microwave and plates to heat outside food saved us so much trouble. Truly honest value.”
+          </p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=120&q=80" alt="Dr. Kavita Nair" class="testi-avatar" loading="lazy" />
+            <div>
+              <h4 class="testi-name">Dr. Kavita Nair</h4>
+              <span class="testi-role">Medical Stay &bull; Bengaluru</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="testimonial-card">
+          <div class="testi-stars" aria-label="5 out of 5 stars">★★★★★</div>
+          <p class="testi-text">
+            “We stayed in the Family Quad Room with two young kids. Great air conditioning, clean white bedsheets, and the staff helped us safely store our bags all afternoon while we visited the temple before our evening flight. Exceptional hospitality!”
+          </p>
+          <div class="testi-author-row">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=120&q=80" alt="Vikram &amp; Neha Sen" class="testi-avatar" loading="lazy" />
+            <div>
+              <h4 class="testi-name">Vikram &amp; Neha Sen</h4>
+              <span class="testi-role">Family Holiday &bull; Kolkata</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 9: TRANSIT LODGE FAQ (ACCESSIBLE ACCORDION)
+       ========================================================================== -->
+  <section class="section bg-subtle" aria-labelledby="faq-heading">
+    <div class="container container-sm">
+      <div class="section-header text-center">
+        <span class="section-tag">Got Questions?</span>
+        <h2 id="faq-heading" class="section-title">Transit Lodge Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Quick clarity on midnight check-in, baggage storage, food policies, and payment terms.
+        </p>
+      </div>
+
+      <div class="accordion-group">
+        <!-- Q1 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h1" aria-expanded="false" aria-controls="faq-p1">
+            <span>Can I check in at 2:00 AM or 3:00 AM if my train arrives late?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p1" role="region" aria-labelledby="faq-h1" hidden>
+            <div class="accordion-body">
+              <p>Yes, absolutely! Our reception desk and front door security are staffed 24 hours a day, 7 days a week. If you arrive late by train or flight, simply let us know your approximate arrival time during booking and your room will be ready and pre-cooled for you.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h2" aria-expanded="false" aria-controls="faq-p2">
+            <span>Can I leave my bags with you after check-out before an evening flight?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p2" role="region" aria-labelledby="faq-h2" hidden>
+            <div class="accordion-body">
+              <p>Yes. Our secure, CCTV-monitored luggage cloakroom is 100% complimentary for all registered guests. You can safely store your suitcases both before standard check-in time and after check-out while you tour the city or attend meetings.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h3" aria-expanded="false" aria-controls="faq-p3">
+            <span>Is outside food allowed in the guest rooms?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p3" role="region" aria-labelledby="faq-h3" hidden>
+            <div class="accordion-body">
+              <p>Yes! We are proud to be outside-food friendly. You can order from Swiggy, Zomato, or bring takeaway parcels. Our reception safely receives your deliveries, and housekeeping will gladly provide ceramic dining plates, bowls, cutlery, and microwave reheating access at zero charge.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h4" aria-expanded="false" aria-controls="faq-p4">
+            <span>Do you have on-site vehicle parking and accommodation for hired drivers?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p4" role="region" aria-labelledby="faq-h4" hidden>
+            <div class="accordion-body">
+              <p>Yes. We have secure covered parking for private cars, self-drive rentals, and mini-buses on our premises. For group bookings of 4+ rooms, we provide a complimentary dormitory bed for your hired driver, complete with washroom facilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h5" aria-expanded="false" aria-controls="faq-p5">
+            <span>What government ID proofs are accepted at check-in?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p5" role="region" aria-labelledby="faq-h5" hidden>
+            <div class="accordion-body">
+              <p>As per local statutory regulations, every adult guest must present a valid government-issued photo ID at check-in. We accept Aadhaar Card, Passport, Voter ID, and Driving License. International travelers must present a valid Passport and Visa.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" id="faq-h6" aria-expanded="false" aria-controls="faq-p6">
+            <span>How do I pay for my booking? Do I need a credit card now?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="accordion-panel" id="faq-p6" role="region" aria-labelledby="faq-h6" hidden>
+            <div class="accordion-body">
+              <p>No credit card or advance payment is required to submit an enquiry. You pay directly during check-in at our front desk. We accept Cash, UPI (Google Pay, PhonePe, Paytm), and all major Visa/Mastercard Debit and Credit Cards.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       SECTION 10: URGENT ROOM TONIGHT CTA BANNER
+       ========================================================================== -->
+  <section class="section-cta" aria-labelledby="urgent-cta-title">
+    <div class="container text-center">
+      <div class="cta-inner-card">
+        <span class="cta-badge">⚡ Arriving Tonight or Need a Room in an Hour?</span>
+        <h2 id="urgent-cta-title" class="cta-title">Don't Wait for Online Sync. Call Front Desk Directly!</h2>
+        <p class="cta-desc">
+          Our 24/7 front desk team allocates clean rooms immediately with zero advance payment. Just show your ID upon arrival.
+        </p>
+        <div class="cta-buttons-row">
+          <a href="tel:+18004567890" class="btn btn-secondary btn-lg">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>Call +1 (800) 456-7890</span>
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-lg">
+            <span>Send Fast Booking Enquiry</span>
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER (SOCIAL LOGINS: FACEBOOK, INSTAGRAM, TWITTER)
+       ========================================================================== -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-top footer-grid">
+        <!-- Brand & Contact Summary -->
+        <div class="footer-brand-col">
+          <div class="brand-logo" style="margin-block-end: 1rem;">
+            <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="36" height="36" />
+            <div class="brand-text-block">
+              <span class="brand-name" style="color: #FFFFFF;">HavenNest</span>
+              <span class="brand-tagline">Lodge &amp; Budget Hotel</span>
+            </div>
+          </div>
+          <p class="footer-text">
+            Clean, trustworthy, and pocket-friendly accommodation located minutes from Central Railway Junction. Free Wi-Fi, 24/7 hot showers, luggage holding, and homestyle food.
+          </p>
+          <div class="footer-contact-mini">
+            <div>📍 42 Railway Station Road, City Junction, PB 560001</div>
+            <div>📞 Direct: <a href="tel:+18004567890">+1 (800) 456-7890</a></div>
+            <div>✉️ Email: <a href="mailto:stay@haven-nest-lodge.com">stay@haven-nest-lodge.com</a></div>
+          </div>
+
+          <!-- Social Links (Redirects to platform login pages) -->
+          <div class="footer-social-links" style="margin-top: 1.25rem;">
+            <a href="https://www.facebook.com/login/" class="social-link" aria-label="Facebook Login" target="_blank" rel="noopener noreferrer" title="Facebook Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" class="social-link" aria-label="Instagram Login" target="_blank" rel="noopener noreferrer" title="Instagram Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login" class="social-link" aria-label="Twitter Login" target="_blank" rel="noopener noreferrer" title="Twitter / X Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 &ndash; Classic Lodge</a></li>
+            <li><a href="home-2.html">Home 2 &ndash; Transit Stay</a></li>
+            <li><a href="rooms.html">Rooms &amp; Tariff</a></li>
+            <li><a href="facilities.html">Lodge Facilities</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+            <li><a href="terms.html">Stay &amp; Cancellation Policies</a></li>
+          </ul>
+        </div>
+
+        <!-- Room Categories -->
+        <div>
+          <h4 class="footer-heading">Room Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="rooms.html?category=standard#rooms-filter-section" data-category="standard">Standard &amp; Budget</a></li>
+            <li><a href="rooms.html?category=deluxe#rooms-filter-section" data-category="deluxe">Deluxe &amp; Suites</a></li>
+            <li><a href="rooms.html?category=family#rooms-filter-section" data-category="family">Family Suites</a></li>
+            <li><a href="rooms.html?category=dormitory#rooms-filter-section" data-category="dormitory">Dorm Bunk Beds</a></li>
+            <li><a href="rooms.html?category=ac#rooms-filter-section" data-category="ac">AC Rooms</a></li>
+            <li><a href="rooms.html?category=non-ac#rooms-filter-section" data-category="non-ac">Non-AC Rooms</a></li>
+          </ul>
+        </div>
+
+        <!-- Tariff Alerts & Offers -->
+        <div>
+          <h4 class="footer-heading">Tariff Alerts &amp; Offers</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; margin-block-end: 0.85rem;">
+            Subscribe to receive seasonal price drops and transit package notifications.
+          </p>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required />
+              <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1rem;">Join</button>
+            </div>
+            <span class="newsletter-note">Zero spam. You can unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> HavenNest Lodge &amp; Budget Hotel. All rights reserved.
+        </div>
+        <div class="footer-legal-links">
+          <a href="terms.html">Cancellation Policy</a>
+          <a href="terms.html">ID Proof Rules</a>
+          <a href="terms.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MOBILE BOTTOM QUICK ACTION BAR
+       ========================================================================== -->
+  <div class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+18004567890" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Enquiry</span>
+    </a>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JavaScript Application Bundle -->
+  <script src="assets/js/data/images.js"></script>
+  <script src="assets/js/data/rooms-data.js"></script>
+  <script src="assets/js/data/blog-data.js"></script>
+  <script src="assets/js/modules/storage.js"></script>
+  <script src="assets/js/modules/toast.js"></script>
+  <script src="assets/js/modules/theme.js"></script>
+  <script src="assets/js/modules/rtl.js"></script>
+  <script src="assets/js/modules/lightbox.js"></script>
+  <script src="assets/js/modules/modal.js"></script>
+  <script src="assets/js/modules/filters.js"></script>
+  <script src="assets/js/modules/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <!-- Home 2 Specific Interactive Logic: Rate Calculator & Travel Style Filtering -->
+  <script>
+    (function () {
+      // 1. Travel Style Tab Filtering with Smooth Auto-Scrolling Animation
+      const roomCards = document.querySelectorAll("#transit-rooms-container .room-card");
+      const stayTrack = document.getElementById("stay-tabs-track");
+      const stayPrev = document.getElementById("stay-filter-prev");
+      const stayNext = document.getElementById("stay-filter-next");
+      const stayToggle = document.getElementById("stay-autoscroll-toggle");
+
+      if (stayTrack) {
+        // Clone tabs once for infinite loop
+        const origStayTabs = Array.from(stayTrack.querySelectorAll(".stay-tab-btn:not([data-is-clone])"));
+        if (origStayTabs.length > 0 && !stayTrack.dataset.hasCloned) {
+          stayTrack.dataset.hasCloned = "true";
+          origStayTabs.forEach((tab) => {
+            const clone = tab.cloneNode(true);
+            clone.setAttribute("data-is-clone", "true");
+            clone.setAttribute("tabindex", "-1");
+            clone.setAttribute("aria-hidden", "true");
+            stayTrack.appendChild(clone);
+          });
+        }
+
+        function getStayOffsetDiff() {
+          const allTabs = stayTrack.querySelectorAll(".stay-tab-btn");
+          if (origStayTabs.length > 0 && allTabs.length > origStayTabs.length) {
+            const origFirst = allTabs[0];
+            const cloneFirst = allTabs[origStayTabs.length];
+            if (origFirst && cloneFirst) {
+              const diff = cloneFirst.offsetLeft - origFirst.offsetLeft;
+              if (diff > 20) return diff;
+            }
+          }
+          return stayTrack.scrollWidth / 2;
+        }
+
+        let stayOffsetDiff = getStayOffsetDiff();
+        let stayVirtualPos = stayTrack.scrollLeft;
+        let isStayPaused = false;
+        let isStayManualPaused = false;
+        let stayTimer = null;
+        let isStayHovering = false;
+        let isStayTouching = false;
+        let isStayFocused = false;
+        const staySpeed = 34; // px per second
+        let lastStayTime = performance.now();
+
+        function pauseStayTemporarily(ms = 2200) {
+          if (isStayManualPaused) return;
+          isStayPaused = true;
+          if (stayTimer) clearTimeout(stayTimer);
+          stayTimer = setTimeout(() => {
+            if (!isStayHovering && !isStayTouching && !isStayFocused && !isStayManualPaused) {
+              isStayPaused = false;
+              stayVirtualPos = stayTrack.scrollLeft;
+              lastStayTime = performance.now();
+            }
+          }, ms);
+        }
+
+        function updateStayToggleBtn() {
+          if (!stayToggle) return;
+          const stopped = isStayManualPaused;
+          stayToggle.classList.toggle("is-paused", stopped);
+          stayToggle.setAttribute("aria-label", stopped ? "Resume auto-scrolling filters" : "Pause auto-scrolling filters");
+          stayToggle.setAttribute("title", stopped ? "Play auto-scroll" : "Pause auto-scroll");
+          stayToggle.innerHTML = stopped
+            ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>'
+            : '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
+        }
+
+        if (stayToggle) {
+          stayToggle.addEventListener("click", () => {
+            isStayManualPaused = !isStayManualPaused;
+            isStayPaused = isStayManualPaused;
+            if (!isStayManualPaused) {
+              stayVirtualPos = stayTrack.scrollLeft;
+              lastStayTime = performance.now();
+            }
+            updateStayToggleBtn();
+          });
+          updateStayToggleBtn();
+        }
+
+        if (stayPrev) {
+          stayPrev.addEventListener("click", () => {
+            stayOffsetDiff = getStayOffsetDiff();
+            stayTrack.scrollBy({ left: -200, behavior: "smooth" });
+            pauseStayTemporarily(2800);
+            setTimeout(() => {
+              if (stayTrack.scrollLeft <= 5 && stayOffsetDiff > 0) {
+                stayTrack.scrollLeft += stayOffsetDiff;
+              }
+              stayVirtualPos = stayTrack.scrollLeft;
+            }, 360);
+          });
+        }
+        if (stayNext) {
+          stayNext.addEventListener("click", () => {
+            stayOffsetDiff = getStayOffsetDiff();
+            stayTrack.scrollBy({ left: 200, behavior: "smooth" });
+            pauseStayTemporarily(2800);
+            setTimeout(() => {
+              if (stayOffsetDiff > 0 && stayTrack.scrollLeft >= stayOffsetDiff) {
+                stayTrack.scrollLeft -= stayOffsetDiff;
+              }
+              stayVirtualPos = stayTrack.scrollLeft;
+            }, 360);
+          });
+        }
+
+        stayTrack.addEventListener("mouseenter", () => { isStayHovering = true; isStayPaused = true; });
+        stayTrack.addEventListener("mouseleave", () => { isStayHovering = false; pauseStayTemporarily(1200); });
+        stayTrack.addEventListener("touchstart", () => { isStayTouching = true; isStayPaused = true; }, { passive: true });
+        stayTrack.addEventListener("touchend", () => { isStayTouching = false; pauseStayTemporarily(2000); });
+        stayTrack.addEventListener("focusin", () => { isStayFocused = true; isStayPaused = true; });
+        stayTrack.addEventListener("focusout", () => { isStayFocused = false; pauseStayTemporarily(1500); });
+        stayTrack.addEventListener("wheel", () => { isStayPaused = true; pauseStayTemporarily(2500); }, { passive: true });
+
+        // Tab selection with filtering
+        function setStayStyle(style) {
+          const allTabs = stayTrack.querySelectorAll(".stay-tab-btn");
+          allTabs.forEach((t) => {
+            if (t.getAttribute("data-style") === style) {
+              t.classList.add("active");
+              t.setAttribute("aria-selected", "true");
+            } else {
+              t.classList.remove("active");
+              t.setAttribute("aria-selected", "false");
+            }
+          });
+
+          roomCards.forEach((card) => {
+            if (style === "all") {
+              card.style.display = "";
+            } else {
+              const cardStyles = card.getAttribute("data-styles") || "";
+              if (cardStyles.includes(style)) {
+                card.style.display = "";
+              } else {
+                card.style.display = "none";
+              }
+            }
+          });
+        }
+
+        stayTrack.addEventListener("click", (e) => {
+          const tab = e.target.closest(".stay-tab-btn");
+          if (!tab) return;
+          e.preventDefault();
+          const selectedStyle = tab.getAttribute("data-style") || "all";
+          setStayStyle(selectedStyle);
+          pauseStayTemporarily(3500);
+        });
+
+        const prefersReducedMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function stayStep(now) {
+          const dt = (now - lastStayTime) / 1000;
+          lastStayTime = now;
+
+          const shouldScroll = !isStayPaused && !isStayManualPaused && !prefersReducedMotion && dt < 0.25;
+
+          if (shouldScroll) {
+            stayOffsetDiff = getStayOffsetDiff();
+            if (stayOffsetDiff > 40) {
+              stayVirtualPos += staySpeed * dt;
+              if (stayVirtualPos >= stayOffsetDiff) {
+                stayVirtualPos -= stayOffsetDiff;
+                stayTrack.scrollLeft -= stayOffsetDiff;
+              }
+              stayTrack.scrollLeft = stayVirtualPos;
+            }
+          } else if (isStayPaused || isStayManualPaused) {
+            stayVirtualPos = stayTrack.scrollLeft;
+          }
+
+          requestAnimationFrame(stayStep);
+        }
+
+        if (!prefersReducedMotion) {
+          stayTrack.classList.add("is-autoscrolling");
+          requestAnimationFrame(stayStep);
+        }
+
+        window.addEventListener("resize", () => {
+          stayOffsetDiff = getStayOffsetDiff();
+        });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(() => {
+            stayOffsetDiff = getStayOffsetDiff();
+          });
+        }
+      }
+
+      // 2. Hero Instant Rate Calculator
+      const calcForm = document.getElementById("hero-calc-form");
+      if (!calcForm) return;
+
+      const cinInput = document.getElementById("h2-checkin");
+      const coutInput = document.getElementById("h2-checkout");
+      const categorySelect = document.getElementById("h2-room-category");
+      const roomSelect = document.getElementById("h2-room");
+      const guestsSelect = document.getElementById("h2-guests");
+      const roomsSelect = document.getElementById("h2-rooms-count");
+      const bfastCheck = document.getElementById("h2-breakfast-toggle");
+
+      const durationEl = document.getElementById("calc-summary-duration");
+      const roomRateEl = document.getElementById("calc-summary-room-rate");
+      const bfastRow = document.getElementById("calc-bfast-row");
+      const bfastRateEl = document.getElementById("calc-summary-bfast-rate");
+      const grandTotalEl = document.getElementById("calc-summary-grand-total");
+      const bfastPriceLabel = document.getElementById("calc-bfast-price-label");
+
+      const heroCategoryNames = {
+        standard: "Standard & Budget",
+        deluxe: "Deluxe & Suites",
+        family: "Family Suites",
+        dormitory: "Dormitory & Pods"
+      };
+
+      const roomTickerFeatures = {
+        "economy-single": "Single Bed • 1 Guest • Spotless Non-AC • 24/7 Hot Water • Free Wi-Fi • Morning Chai",
+        "standard-single-ac": "Single Bed • 1 Guest • Split AC • Work Desk • Attached Bath • 24/7 Hot Geyser",
+        "standard-double": "Queen Bed • 2 Guests • Split AC • 24/7 Hot Shower • 50 Mbps Wi-Fi • Extra Pillows Free",
+        "budget-twin": "2 Twin Beds • 2 Guests • Split AC • Attached Bath • 24/7 Hot Water • Safe Cloakroom",
+        "triple-sharing": "3 Single Beds • 3 Guests • Split AC • Hot Shower • High-Speed Wi-Fi • Zero Surge",
+        "deluxe-double": "King Bed • Balcony View • Split AC • Work Desk • Attached Bath • Morning Chai & Coffee",
+        "deluxe-triple": "3 Single Beds • City View • Split AC • Large Wardrobe • 24/7 Hot Water",
+        "executive-suite": "King Bed • AC • City View • Sofa Seating • Attached Bath • Morning Filter Coffee",
+        "family-quad": "4 Guests • 2 Queen Beds • Split AC • Spacious Suite • Attached Bath • Outside Food Welcome",
+        "family-room": "4 Guests • 2 Queen Beds • Split AC • Spacious Suite • Attached Bath • Outside Food Welcome",
+        "family-interconnected": "2 Rooms Suite • 4-6 Guests • Interconnected • 2 Attached Baths • City View",
+        "dormitory-bed": "1 AC Pod Bed • Reading Light • Power Socket • Safe Locker • 24/7 Hot Shower",
+        "female-dorm-pod": "Female-Only Pod • Privacy Curtain • Keycard Access • Safe Locker • 24/7 Hot Shower"
+      };
+
+      function populateHeroRooms(category, preferredRoomId) {
+        if (!roomSelect) return;
+        const rooms = (typeof ROOMS_DATA !== "undefined" && ROOMS_DATA.length) ? ROOMS_DATA : [
+          { id: "standard-double", name: "Standard Double Room", category: "standard", acType: "ac", startingPrice: 32, startingPriceINR: 1899 },
+          { id: "economy-single", name: "Economy Single Room", category: "standard", acType: "non-ac", startingPrice: 24, startingPriceINR: 1399 },
+          { id: "standard-single-ac", name: "Standard Single Room (AC)", category: "standard", acType: "ac", startingPrice: 28, startingPriceINR: 1649 },
+          { id: "budget-twin", name: "Budget Twin Room", category: "standard", acType: "ac", startingPrice: 30, startingPriceINR: 1799 },
+          { id: "triple-sharing", name: "Triple Sharing Room", category: "standard", acType: "ac", startingPrice: 42, startingPriceINR: 2599 },
+          { id: "deluxe-double", name: "Deluxe Double Room", category: "deluxe", acType: "ac", startingPrice: 39, startingPriceINR: 2399 },
+          { id: "deluxe-triple", name: "Deluxe Triple Room with City View", category: "deluxe", acType: "ac", startingPrice: 45, startingPriceINR: 2699 },
+          { id: "executive-suite", name: "Executive King Room", category: "deluxe", acType: "ac", startingPrice: 48, startingPriceINR: 2899 },
+          { id: "family-quad", name: "Family Quad Suite", category: "family", acType: "ac", startingPrice: 52, startingPriceINR: 3199 },
+          { id: "family-interconnected", name: "Family Interconnected 2-Room Suite", category: "family", acType: "ac", startingPrice: 68, startingPriceINR: 3999 },
+          { id: "dormitory-bed", name: "Dormitory Bunk Bed (AC)", category: "dormitory", acType: "ac", startingPrice: 12, startingPriceINR: 699 },
+          { id: "female-dorm-pod", name: "Female Dormitory Pod Bed (AC)", category: "dormitory", acType: "ac", startingPrice: 14, startingPriceINR: 799 }
+        ];
+
+        let html = "";
+        if (category === "all") {
+          ["standard", "deluxe", "family", "dormitory"].forEach((c) => {
+            const catRooms = rooms.filter((r) => r.category === c);
+            if (catRooms.length) {
+              html += `<optgroup label="${heroCategoryNames[c]}">`;
+              catRooms.forEach((r) => {
+                const acTag = r.name.toLowerCase().includes("ac") ? "" : ` (${r.acType === "ac" ? "AC" : "Non-AC"})`;
+                html += `<option value="${r.id}" data-category="${r.category}" data-usd="${r.startingPrice}" data-inr="${r.startingPriceINR}">${r.name}${acTag}</option>`;
+              });
+              html += `</optgroup>`;
+            }
+          });
+        } else {
+          const catRooms = rooms.filter((r) => r.category === category);
+          catRooms.forEach((r) => {
+            const acTag = r.name.toLowerCase().includes("ac") ? "" : ` (${r.acType === "ac" ? "AC" : "Non-AC"})`;
+            html += `<option value="${r.id}" data-category="${r.category}" data-usd="${r.startingPrice}" data-inr="${r.startingPriceINR}">${r.name}${acTag}</option>`;
+          });
+        }
+
+        roomSelect.innerHTML = html;
+
+        // Auto-selection of appropriate room in the category
+        const exists = Array.from(roomSelect.options).some((o) => o.value === preferredRoomId);
+        if (exists) {
+          roomSelect.value = preferredRoomId;
+        } else {
+          if (category === "standard") roomSelect.value = "standard-double";
+          else if (category === "deluxe") roomSelect.value = "deluxe-double";
+          else if (category === "family") roomSelect.value = "family-quad";
+          else if (category === "dormitory") roomSelect.value = "dormitory-bed";
+          else roomSelect.selectedIndex = 0;
+        }
+      }
+
+      // Setup default dates: Today and Tomorrow
+      const now = new Date();
+      const yyyy = now.getFullYear();
+      const mm = String(now.getMonth() + 1).padStart(2, "0");
+      const dd = String(now.getDate()).padStart(2, "0");
+      const todayStr = `${yyyy}-${mm}-${dd}`;
+
+      const tomorrow = new Date(now);
+      tomorrow.setDate(tomorrow.getDate() + 1);
+      const tmStr = `${tomorrow.getFullYear()}-${String(tomorrow.getMonth() + 1).padStart(2, "0")}-${String(tomorrow.getDate()).padStart(2, "0")}`;
+
+      cinInput.min = todayStr;
+      cinInput.value = todayStr;
+      coutInput.min = tmStr;
+      coutInput.value = tmStr;
+
+      cinInput.addEventListener("change", () => {
+        const nextDate = new Date(cinInput.value);
+        nextDate.setDate(nextDate.getDate() + 1);
+        const minCout = `${nextDate.getFullYear()}-${String(nextDate.getMonth() + 1).padStart(2, "0")}-${String(nextDate.getDate()).padStart(2, "0")}`;
+        coutInput.min = minCout;
+        if (coutInput.value <= cinInput.value) {
+          coutInput.value = minCout;
+        }
+        recalculate();
+      });
+
+      coutInput.addEventListener("change", recalculate);
+
+      if (categorySelect) {
+        categorySelect.addEventListener("change", () => {
+          populateHeroRooms(categorySelect.value);
+          recalculate();
+        });
+      }
+
+      roomSelect.addEventListener("change", recalculate);
+
+      guestsSelect.addEventListener("change", () => {
+        const g = parseInt(guestsSelect.value, 10);
+        if (categorySelect) {
+          if (g >= 4 && categorySelect.value !== "family" && categorySelect.value !== "all") {
+            categorySelect.value = "family";
+            populateHeroRooms("family", "family-quad");
+          } else if (g === 1 && categorySelect.value === "family") {
+            categorySelect.value = "standard";
+            populateHeroRooms("standard", "standard-double");
+          }
+        }
+        recalculate();
+      });
+
+      roomsSelect.addEventListener("change", recalculate);
+      bfastCheck.addEventListener("change", recalculate);
+
+      function getSelectedCurrency() {
+        return typeof Storage !== "undefined" ? Storage.getCurrency() : "USD";
+      }
+
+      function recalculate() {
+        const d1 = new Date(cinInput.value);
+        const d2 = new Date(coutInput.value);
+        let nights = Math.max(1, Math.round((d2 - d1) / (1000 * 60 * 60 * 24)));
+        if (isNaN(nights) || nights < 1) nights = 1;
+
+        durationEl.textContent = `${nights} ${nights === 1 ? "Night" : "Nights"}`;
+
+        const curr = getSelectedCurrency();
+        const selectedOpt = roomSelect.options[roomSelect.selectedIndex];
+        if (!selectedOpt) return;
+        const baseRate = curr === "INR" ? parseFloat(selectedOpt.getAttribute("data-inr") || "1899") : parseFloat(selectedOpt.getAttribute("data-usd") || "32");
+        const roomsCount = parseInt(roomsSelect.value, 10) || 1;
+        const guestsCount = parseInt(guestsSelect.value, 10) || 2;
+
+        const totalRoomCost = baseRate * nights * roomsCount;
+        const sym = curr === "INR" ? "₹" : "$";
+
+        roomRateEl.textContent = `${sym}${baseRate.toLocaleString()} × ${nights}N`;
+
+        // Breakfast add-on calculation ($3 / ₹150 per person per night)
+        let totalBfastCost = 0;
+        const bfastPerPerson = curr === "INR" ? 150 : 3;
+        bfastPriceLabel.textContent = `+ ${sym}${bfastPerPerson} per guest / night`;
+
+        if (bfastCheck.checked) {
+          totalBfastCost = bfastPerPerson * guestsCount * nights;
+          bfastRow.style.display = "flex";
+          bfastRateEl.textContent = `+${sym}${totalBfastCost.toLocaleString()}`;
+        } else {
+          bfastRow.style.display = "none";
+        }
+
+        const grandTotal = totalRoomCost + totalBfastCost;
+        grandTotalEl.textContent = `${sym}${grandTotal.toLocaleString()}`;
+
+        // Also update live animated room ticker
+        updateRoomTicker();
+
+        // Also update all room card prices on page
+        updateRoomCardsCurrency(curr);
+      }
+
+      function updateRoomTicker() {
+        const item1 = document.getElementById("h2-ticker-item-1");
+        const item2 = document.getElementById("h2-ticker-item-2");
+        if (!item1 || !item2) return;
+
+        const curr = getSelectedCurrency();
+        const sym = curr === "INR" ? "₹" : "$";
+        const selectedOpt = roomSelect.options[roomSelect.selectedIndex];
+        if (!selectedOpt) return;
+        const baseRate = curr === "INR" ? parseFloat(selectedOpt.getAttribute("data-inr") || "1899") : parseFloat(selectedOpt.getAttribute("data-usd") || "32");
+        const roomName = selectedOpt.text;
+        const features = roomTickerFeatures[roomSelect.value] || "Clean & Cosy • 24/7 Hot Water • Free Wi-Fi";
+
+        const html = `<strong>${roomName}</strong> &bull; <span class="ticker-rate">${sym}${baseRate.toLocaleString()}/night</span> &bull; ${features} &bull; <em>Direct Check-in Guarantee</em>`;
+        item1.innerHTML = html;
+        item2.innerHTML = html;
+      }
+
+      function updateRoomCardsCurrency(curr) {
+        if (typeof ROOMS_DATA === "undefined") return;
+
+        const sym = curr === "INR" ? "₹" : "$";
+        const priceEls = document.querySelectorAll("[data-room-price]");
+        const weekendEls = document.querySelectorAll("[data-room-weekend]");
+
+        priceEls.forEach((el) => {
+          const rId = el.getAttribute("data-room-price");
+          const r = ROOMS_DATA.find((x) => x.id === rId);
+          if (r) {
+            const p = curr === "INR" ? r.startingPriceINR : r.startingPrice;
+            el.textContent = `${sym}${p.toLocaleString()}`;
+          }
+        });
+
+        weekendEls.forEach((el) => {
+          const rId = el.getAttribute("data-room-weekend");
+          const r = ROOMS_DATA.find((x) => x.id === rId);
+          if (r) {
+            const wp = curr === "INR" ? r.weekendRateINR : r.weekendRate;
+            el.textContent = `Weekend: ${sym}${wp.toLocaleString()}`;
+          }
+        });
+      }
+
+      // Listen for global currency toggle
+      window.addEventListener("haven:currencyChange", (e) => {
+        recalculate();
+      });
+
+      // Form submission -> Redirect to contact.html with prefilled enquiry query params
+      calcForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const roomId = roomSelect.value;
+        const cin = cinInput.value;
+        const cout = coutInput.value;
+        const guests = guestsSelect.value;
+        const rooms = roomsSelect.value;
+        const bfast = bfastCheck.checked ? "yes" : "no";
+
+        const params = new URLSearchParams({
+          room: roomId,
+          checkin: cin,
+          checkout: cout,
+          adults: guests,
+          rooms: rooms,
+          breakfast: bfast
+        });
+
+        window.location.href = `contact.html?${params.toString()}`;
+      });
+
+      // Initial population & calculation
+      if (categorySelect) {
+        populateHeroRooms(categorySelect.value, "standard-double");
+      }
+      recalculate();
+    })();
+  </script>
+</body>
+</html>

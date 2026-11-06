@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stay Policies &amp; Terms | HavenNest Lodge &amp; Budget Hotel</title>
+  <meta name="description" content="Transparent stay policies: check-in timings, ID proof requirements, cancellation terms, and guest data privacy at HavenNest Lodge." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Prevent FOUC: Pre-apply saved Theme & RTL before render (Defaults to Light) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("haven_theme_mode");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        var rtl = localStorage.getItem("haven_rtl_pref");
+        if (rtl === "true") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="haven-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-name">HavenNest</span>
+          <span class="brand-tagline">Lodge &amp; Budget Hotel</span>
+        </div>
+      </a>
+      <!-- Desktop Nav with Home Dropdown -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1 &ndash; Classic Lodge</span>
+              <span class="dropdown-item-desc">Traditional budget hotel &amp; comprehensive room showcase</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">
+                Home 2 &ndash; Transit Hub
+                <span class="dropdown-badge">Popular</span>
+              </span>
+              <span class="dropdown-item-desc">Fast-track booking, live rate calculator &amp; railway transit hub</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="rooms.html" class="nav-link">Rooms &amp; Tariff</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="terms.html" class="nav-link active">Policies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="navbar-actions">
+        <!-- Currency Switcher -->
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
+          <span class="curr-label">$ USD</span>
+        </button>
+
+        <!-- LTR / RTL Toggle -->
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch between LTR and RTL">
+          <span class="rtl-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+          </span>
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary">Book Enquiry</a>
+
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="32" height="32" />
+        <span class="brand-name">HavenNest</span>
+      </a>
+      <button type="button" class="drawer-close mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Mobile Quick Controls -->
+      <div class="drawer-controls-row">
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
+          <span class="curr-label">$ USD</span>
+        </button>
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="drawer-nav-link">Home 1 &ndash; Classic Lodge</a></li>
+        <li><a href="home-2.html" class="drawer-nav-link">Home 2 &ndash; Transit Hub</a></li>
+        <li><a href="rooms.html" class="drawer-nav-link">Rooms &amp; Tariff</a></li>
+        <li><a href="facilities.html" class="drawer-nav-link">Facilities</a></li>
+        <li><a href="blog.html" class="drawer-nav-link">Travel Blog &amp; Guides</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact &amp; Enquiry</a></li>
+        <li><a href="terms.html" class="drawer-nav-link active" aria-current="page">Stay Policies</a></li>
+      </ul>
+    </div>
+    <div class="drawer-footer">
+      <a href="contact.html" class="btn btn-primary btn-block">Send Booking Enquiry</a>
+      <a href="tel:+18004567890" class="btn btn-outline btn-block">Call Front Desk</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero & Breadcrumbs -->
+  <section class="page-hero" aria-label="Policies Header">
+    <div class="container">
+      <h1 class="page-title">Stay Policies &amp; Terms</h1>
+      <p class="page-subtitle">
+        Clear, transparent guidelines regarding room reservations, cancellation, ID verification, and guest privacy.
+      </p>
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Stay Policies</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Content Container -->
+  <main class="section-padding">
+    <div class="container" style="max-width: 1100px;">
+
+      <article style="background: var(--bg-surface); padding: 2.5rem; border-radius: var(--radius-lg); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm); line-height: 1.7;">
+
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            1. Booking Enquiry &amp; Reservation Confirmation
+          </h2>
+          <p>
+            HavenNest Lodge operates an open booking enquiry system designed to eliminate unnecessary third-party commissions. When you submit a booking enquiry through our website, your chosen room type is temporarily blocked for you.
+          </p>
+          <p>
+            Within 15 minutes of receiving your enquiry, our front desk team will contact you via phone or WhatsApp to reconfirm your estimated arrival time. Your room is fully confirmed once this verbal or text confirmation is complete.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            2. Check-In &amp; Check-Out Hours
+          </h2>
+          <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1rem;">
+            <li><strong>Standard Check-In:</strong> 12:00 PM (Noon)</li>
+            <li><strong>Standard Check-Out:</strong> 11:00 AM</li>
+            <li><strong>Early Check-In:</strong> Available from 08:00 AM onwards free of charge, subject to room availability upon arrival. For guaranteed check-in prior to 08:00 AM, previous night booking or half-day rate is applicable.</li>
+            <li><strong>Complimentary Cloakroom:</strong> Guests arriving before check-in or departing late after check-out are welcome to leave luggage in our secure cloakroom without charge.</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            3. Mandatory Government Identity Verification
+          </h2>
+          <p>
+            As mandated by municipal police and lodging statutory guidelines, <strong>all adult guests (18 years and above)</strong> must present an original, valid government-approved photo ID containing address proof at check-in.
+          </p>
+          <p>
+            Acceptable identification documents:
+          </p>
+          <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1rem;">
+            <li>Aadhaar Card (India)</li>
+            <li>Original Passport (Mandatory for all foreign national travelers with valid Visa)</li>
+            <li>Voter ID Card</li>
+            <li>Driver’s License</li>
+          </ul>
+          <p style="color: var(--color-danger); font-size: 0.9rem;">
+            *Note: PAN Cards and digital phone screenshots without original physical card are not accepted under statutory lodging compliance.
+          </p>
+        </section>
+
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            4. Free Cancellation &amp; Date Modifications
+          </h2>
+          <p>
+            We believe in honest, fair hospitality without cancellation penalties. If your transit schedule changes:
+          </p>
+          <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1rem;">
+            <li>You may modify your travel dates or cancel your reservation completely at zero penalty up to <strong>24 hours prior</strong> to your scheduled check-in date.</li>
+            <li>Simply call or WhatsApp our front desk at <strong>+1 (800) 456-7890</strong> or <strong>+91 98765 43210</strong> quoting your enquiry reference number.</li>
+          </ul>
+        </section>
+
+        <section style="margin-bottom: 2.5rem;">
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            5. House Rules &amp; Peace of the Property
+          </h2>
+          <ul style="list-style: disc; margin-inline-start: 1.5rem; margin-bottom: 1rem;">
+            <li><strong>Non-Smoking Policy:</strong> All bedrooms, bathrooms, elevators, and interior corridors are strictly smoke-free zones. Smoking is only allowed in designated outdoor zones.</li>
+            <li><strong>Silence Hours:</strong> Quiet hours are enforced between 10:30 PM and 06:00 AM. Loud music, shouting, or disturbances in guest corridors will result in immediate management intervention.</li>
+            <li><strong>Visitors:</strong> Outside non-staying guests are permitted in the lobby lounge until 09:00 PM. No non-registered visitors are permitted in guest bedrooms after 09:00 PM.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 style="font-size: 1.5rem; color: var(--text-heading); margin-bottom: 1rem; border-bottom: 2px solid var(--border-light); padding-bottom: 0.5rem;">
+            6. Privacy Policy &amp; Guest Data Protection
+          </h2>
+          <p>
+            We respect your privacy. Any personal information (name, telephone number, email address, ID copy) collected during your enquiry or stay is used strictly for reservation management, front-desk communication, and legal police guest registers.
+          </p>
+          <p>
+            We do <strong>not</strong> sell, rent, or distribute guest contact details to any third-party marketing companies, insurance agents, or advertisers.
+          </p>
+        </section>
+
+      </article>
+
+      <div style="text-align: center; margin-top: 2.5rem;">
+        <a href="contact.html" class="btn btn-primary">Have Questions? Contact Front Desk &rarr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo" style="margin-block-end: 1rem;">
+            <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="36" height="36" />
+            <span class="brand-name" style="color: #FFFFFF;">HavenNest Lodge</span>
+          </div>
+          <p class="footer-brand-desc">
+            Comfortable, spotless and welcoming budget hotel and lodge. High quality beds, hot showers, and honest pricing.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/login/" class="social-link" aria-label="Facebook Login" target="_blank" rel="noopener noreferrer" title="Facebook Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" class="social-link" aria-label="Instagram Login" target="_blank" rel="noopener noreferrer" title="Instagram Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login" class="social-link" aria-label="Twitter Login" target="_blank" rel="noopener noreferrer" title="Twitter / X Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 &ndash; Classic Lodge</a></li>
+            <li><a href="home-2.html">Home 2 &ndash; Transit Stay</a></li>
+            <li><a href="rooms.html">Rooms &amp; Tariff</a></li>
+            <li><a href="facilities.html">Lodge Facilities</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+            <li><a href="terms.html">Stay &amp; Cancellation Policies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Room Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="rooms.html?category=standard#rooms-filter-section" data-category="standard">Standard &amp; Budget</a></li>
+            <li><a href="rooms.html?category=deluxe#rooms-filter-section" data-category="deluxe">Deluxe &amp; Suites</a></li>
+            <li><a href="rooms.html?category=family#rooms-filter-section" data-category="family">Family Suites</a></li>
+            <li><a href="rooms.html?category=dormitory#rooms-filter-section" data-category="dormitory">Dorm Bunk Beds</a></li>
+            <li><a href="rooms.html?category=ac#rooms-filter-section" data-category="ac">AC Rooms</a></li>
+            <li><a href="rooms.html?category=non-ac#rooms-filter-section" data-category="non-ac">Non-AC Rooms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Tariff Alerts &amp; Offers</h4>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required />
+              <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1rem;">Join</button>
+            </div>
+            <span class="newsletter-note">Zero spam. You can unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> HavenNest Lodge &amp; Budget Hotel. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="terms.html">Cancellation Policy</a>
+          <a href="terms.html">ID Proof Rules</a>
+          <a href="terms.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/modules/storage.js"></script>
+  <script src="assets/js/modules/toast.js"></script>
+  <script src="assets/js/modules/theme.js"></script>
+  <script src="assets/js/modules/rtl.js"></script>
+  <script src="assets/js/modules/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

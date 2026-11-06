@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lodge Facilities &amp; Amenities | HavenNest Lodge &amp; Budget Hotel</title>
+  <meta name="description" content="Discover modern comfort on a budget: 24/7 hot water, high-speed Wi-Fi, generator backup, elevator, free parking, and homestyle dining at HavenNest Lodge." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Prevent FOUC: Pre-apply saved Theme & RTL before render (Defaults to Light) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("haven_theme_mode");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        var rtl = localStorage.getItem("haven_rtl_pref");
+        if (rtl === "true") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="haven-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-name">HavenNest</span>
+          <span class="brand-tagline">Lodge &amp; Budget Hotel</span>
+        </div>
+      </a>
+      <!-- Desktop Nav with Home Dropdown -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1 &ndash; Classic Lodge</span>
+              <span class="dropdown-item-desc">Traditional budget hotel &amp; comprehensive room showcase</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">
+                Home 2 &ndash; Transit Hub
+                <span class="dropdown-badge">Popular</span>
+              </span>
+              <span class="dropdown-item-desc">Fast-track booking, live rate calculator &amp; railway transit hub</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="rooms.html" class="nav-link">Rooms &amp; Tariff</a>
+        <a href="facilities.html" class="nav-link active">Facilities</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="terms.html" class="nav-link">Policies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="navbar-actions">
+        <!-- Currency Switcher -->
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
+          <span class="curr-label">$ USD</span>
+        </button>
+
+        <!-- LTR / RTL Toggle -->
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch between LTR and RTL">
+          <span class="rtl-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+          </span>
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book Enquiry</span>
+        </a>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="32" height="32" />
+        <span class="brand-name">HavenNest</span>
+      </a>
+      <button type="button" class="drawer-close mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Mobile Quick Controls -->
+      <div class="drawer-controls-row">
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
+          <span class="curr-label">$ USD</span>
+        </button>
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="drawer-nav-link">Home 1 &ndash; Classic Lodge</a></li>
+        <li><a href="home-2.html" class="drawer-nav-link">Home 2 &ndash; Transit Hub</a></li>
+        <li><a href="rooms.html" class="drawer-nav-link">Rooms &amp; Tariff</a></li>
+        <li><a href="facilities.html" class="drawer-nav-link active" aria-current="page">Facilities</a></li>
+        <li><a href="blog.html" class="drawer-nav-link">Travel Blog &amp; Guides</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact &amp; Enquiry</a></li>
+        <li><a href="terms.html" class="drawer-nav-link">Stay Policies</a></li>
+      </ul>
+    </div>
+    <div class="drawer-footer">
+      <a href="contact.html" class="btn btn-primary btn-block">Send Booking Enquiry</a>
+      <a href="tel:+18004567890" class="btn btn-outline btn-block">Call Front Desk</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero & Breadcrumbs -->
+  <section class="page-hero" aria-label="Facilities Header">
+    <div class="container">
+      <h1 class="page-title">Facilities &amp; Guest Amenities</h1>
+      <p class="page-subtitle">
+        Everything you need for a restful, secure, and hassle-free stay. No exaggerated luxury promises—just dependable comfort done right.
+      </p>
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Facilities</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Category 1: In-Room Amenities -->
+  <section class="section-padding" style="padding-bottom: 2rem;">
+    <div class="container">
+      <div class="facility-category-block">
+        <h2 class="facility-category-title">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          In-Room Features &amp; Comforts
+        </h2>
+        <div class="facility-cards-grid">
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <span class="badge badge-success">Free / Included</span>
+            </div>
+            <h3 class="facility-title">24/7 Geyser Hot Water</h3>
+            <p class="facility-desc">Every room is fitted with an independent electric water heater geyser for instant hot showers anytime.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>
+              </div>
+              <span class="badge badge-success">Free High-Speed</span>
+            </div>
+            <h3 class="facility-title">Unlimited Fiber Wi-Fi</h3>
+            <p class="facility-desc">Dedicated Wi-Fi access points on every floor delivering 50-100 Mbps internet for smooth streaming and video calls.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+              </div>
+              <span class="badge badge-success">Included</span>
+            </div>
+            <h3 class="facility-title">LED TV with HD Channels</h3>
+            <p class="facility-desc">Enjoy news, sports, entertainment, and regional channels after a long day of travel.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"/></svg>
+              </div>
+              <span class="badge badge-success">Included in AC Rooms</span>
+            </div>
+            <h3 class="facility-title">Energy-Saver Split AC</h3>
+            <p class="facility-desc">Low-noise inverter air conditioning units with adjustable temperature and remote control.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+              </div>
+              <span class="badge badge-success">Included</span>
+            </div>
+            <h3 class="facility-title">Wardrobe &amp; Luggage Rack</h3>
+            <p class="facility-desc">Sturdy wooden wardrobe with cloth hangers, full-length dressing mirror, and elevated luggage bench.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <span class="badge badge-success">Deluxe &amp; Suites</span>
+            </div>
+            <h3 class="facility-title">Electric Kettle &amp; Tea Kit</h3>
+            <p class="facility-desc">In-room electric kettle supplied with complimentary tea bags, coffee sachets, creamer, and sugar.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 4v16M2 8h20v12M2 17h20M6 8v9"/></svg>
+              </div>
+              <span class="badge badge-success">Free On Request</span>
+            </div>
+            <h3 class="facility-title">Extra Pillow &amp; Blanket Menu</h3>
+            <p class="facility-desc">Request extra soft microfiber pillows, sanitized bedsheets, or cozy winter blankets anytime with a quick front desk ring.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 12v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6"/><path d="M6 12V7a6 6 0 0 1 12 0v5"/></svg>
+              </div>
+              <span class="badge badge-success">Free On Request</span>
+            </div>
+            <h3 class="facility-title">Sanitized Dental Kit &amp; Steam Iron</h3>
+            <p class="facility-desc">Complimentary personal toothbrush &amp; paste kits, bathing soap, and an electric steam iron with ironing board delivered promptly.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 2: Hotel Services -->
+      <div class="facility-category-block">
+        <h2 class="facility-category-title">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          Hotel &amp; Hospitality Services
+        </h2>
+        <div class="facility-cards-grid">
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span class="badge badge-success">24/7 Available</span>
+            </div>
+            <h3 class="facility-title">24-Hour Front Desk</h3>
+            <p class="facility-desc">Round-the-clock staffed desk for check-ins, transit directions, taxi bookings, and general assistance.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="badge badge-success">Daily Free</span>
+            </div>
+            <h3 class="facility-title">Daily Housekeeping</h3>
+            <p class="facility-desc">Thorough daily room cleaning, floor disinfection, trash disposal, and linen freshening upon request.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              </div>
+              <span class="badge badge-success">Complimentary</span>
+            </div>
+            <h3 class="facility-title">Secure Luggage Cloakroom</h3>
+            <p class="facility-desc">Safe storage facility to deposit your suitcases before check-in or after check-out while you explore the city.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <span class="badge badge-success">Free Service</span>
+            </div>
+            <h3 class="facility-title">Early Morning Wake-Up Calls</h3>
+            <p class="facility-desc">Never miss an early morning train or flight. Notify the desk the night before for a guaranteed personal wake-up ring.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+              </div>
+              <span class="badge badge-neutral">Paid On Request</span>
+            </div>
+            <h3 class="facility-title">Station &amp; Airport Pickup</h3>
+            <p class="facility-desc">Pre-book reliable, metered taxi or auto-rickshaw pickup directly from the railway station or airport.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M16 12l-4-4-4 4M12 8v8"/></svg>
+              </div>
+              <span class="badge badge-neutral">Paid / Same Day</span>
+            </div>
+            <h3 class="facility-title">Quick Laundry &amp; Ironing</h3>
+            <p class="facility-desc">Prompt clothes washing and iron press services available with same-day evening return for urgent business wear.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 3: Food, Dining & Beverage Services -->
+      <div class="facility-category-block">
+        <h2 class="facility-category-title">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          Food, Dining &amp; Beverage Services
+        </h2>
+        <div class="facility-cards-grid">
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+              </div>
+              <span class="badge badge-accent">$3 / ₹150 Add-on</span>
+            </div>
+            <h3 class="facility-title">Hot Homestyle Breakfast Hall</h3>
+            <p class="facility-desc">Freshly prepared morning meals featuring regional favorites (Idli-Vada-Sambar, Poha, Aloo Parathas) or Eggs &amp; Toast with tea/coffee.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <span class="badge badge-success">Room Delivery</span>
+            </div>
+            <h3 class="facility-title">Morning Filter Coffee &amp; Chai</h3>
+            <p class="facility-desc">Fresh ginger tea or authentic South Indian filter coffee delivered straight to your bedroom between 6:30 AM and 9:30 AM.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>
+              </div>
+              <span class="badge badge-success">Free Service</span>
+            </div>
+            <h3 class="facility-title">Outside Food &amp; Cutlery Support</h3>
+            <p class="facility-desc">Order through Swiggy, Zomato, or local takeaway counters. We supply sanitized dining plates, bowls, cutlery, and microwave warming.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span class="badge badge-success">24/7 Available</span>
+            </div>
+            <h3 class="facility-title">Late-Night Room Service Menu</h3>
+            <p class="facility-desc">Arriving on a late train? Order hot instant noodles, warm toast, biscuits, mineral water, and hot milk with 15-minute room delivery.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <span class="badge badge-success">Unlimited Free</span>
+            </div>
+            <h3 class="facility-title">UV+RO Pure Water Stations</h3>
+            <p class="facility-desc">Free sealed bottle on check-in plus hygienic water refill dispensers on every guest floor providing chilled and normal drinking water.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <span class="badge badge-success">On Request</span>
+            </div>
+            <h3 class="facility-title">Group &amp; Tour Catering</h3>
+            <p class="facility-desc">Coordinated bulk breakfast and dinner arrangements for pilgrimage tour groups, wedding guests, and family reunions.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Category 4: Safety & Building Infrastructure -->
+      <div class="facility-category-block">
+        <h2 class="facility-category-title">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Safety, Security &amp; Infrastructure
+        </h2>
+        <div class="facility-cards-grid">
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+              </div>
+              <span class="badge badge-success">Full Generator</span>
+            </div>
+            <h3 class="facility-title">100% Automatic Power Backup</h3>
+            <p class="facility-desc">Heavy-duty diesel generator ensures zero power cut disruption. Lights, fans, TV, Wi-Fi, and elevator work seamlessly.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <span class="badge badge-success">All Floors</span>
+            </div>
+            <h3 class="facility-title">Passenger Elevator / Lift</h3>
+            <p class="facility-desc">Modern, well-maintained passenger lift serving all floors, making the lodge accessible for elderly and family guests.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              </div>
+              <span class="badge badge-success">Monitored</span>
+            </div>
+            <h3 class="facility-title">CCTV Surveillance</h3>
+            <p class="facility-desc">Continuous high-definition cameras installed across building perimeter, parking area, lobby, and all corridors.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+              </div>
+              <span class="badge badge-success">Complimentary</span>
+            </div>
+            <h3 class="facility-title">Gated Parking Lot</h3>
+            <p class="facility-desc">Safe ground-level covered parking for guest motorcycles, cars, and minivans with security guard presence.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              </div>
+              <span class="badge badge-success">Certified</span>
+            </div>
+            <h3 class="facility-title">Fire Safety Equipment</h3>
+            <p class="facility-desc">Smoke detectors in corridors, fire hose reels, ABC-rated fire extinguishers on every level, and wide emergency exits.</p>
+          </div>
+
+          <div class="facility-card">
+            <div class="facility-card-top">
+              <div class="facility-icon-wrap">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <span class="badge badge-success">24/7 Tie-up</span>
+            </div>
+            <h3 class="facility-title">Doctor on Call</h3>
+            <p class="facility-desc">First-aid trained staff and on-call medical doctor available round the clock for emergencies or traveler ailments.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Highlight Property Features Grid with Images -->
+  <section class="section-padding" style="background-color: var(--bg-subtle);" aria-label="Spaces Showcase">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Property Tour</span>
+        <h2 class="section-title">Designed For Guest Comfort</h2>
+        <p class="section-subtitle">
+          Take a look at the dedicated common spaces created for convenience, dining, and safety.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="room-card">
+          <div class="room-card-media">
+            <img src="assets/images/property/reception.jpg" alt="Lodge Reception" class="room-card-img" loading="lazy" />
+          </div>
+          <div class="room-card-content">
+            <h3 class="room-card-title">Welcoming Reception &amp; Lounge</h3>
+            <p class="room-card-desc">Air-conditioned check-in counter with comfortable waiting couches, travel brochure desk, and filtered RO drinking water dispenser.</p>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Dining Room" class="room-card-img" loading="lazy" />
+          </div>
+          <div class="room-card-content">
+            <h3 class="room-card-title">Breakfast &amp; Dining Hall</h3>
+            <p class="room-card-desc">Spacious seating where guests can enjoy freshly brewed South/North Indian filter coffee and morning breakfast platters.</p>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-card-media">
+            <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Covered Parking" class="room-card-img" loading="lazy" />
+          </div>
+          <div class="room-card-content">
+            <h3 class="room-card-title">Enclosed Vehicle Parking</h3>
+            <p class="room-card-desc">Dedicated drive-in parking on premises so your car or bike stays sheltered from rain, sun, and city street hazards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- House Rules & Policies Block -->
+  <section class="section-padding" style="background-color: var(--bg-surface);" aria-label="Stay Policies">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Good To Know</span>
+        <h2 class="section-title">House Rules &amp; Guest Guidelines</h2>
+        <p class="section-subtitle">
+          Simple guidelines that keep HavenNest peaceful, clean, and family-friendly for everyone.
+        </p>
+      </div>
+
+      <div class="modal-rules-box" style="max-width: 1040px; margin-inline: auto; padding: 2rem;">
+        <div class="modal-inclusions-grid" style="margin-bottom: 1.5rem;">
+          <div>
+            <h4 style="font-size: 1.1rem; color: var(--text-heading); margin-bottom: 0.75rem;">Timings &amp; Check-In</h4>
+            <ul class="rules-list">
+              <li class="rule-item">Check-in time is from 12:00 PM onwards. Early check-in from 8:00 AM subject to room readiness.</li>
+              <li class="rule-item">Check-out time is strictly 11:00 AM to allow thorough housekeeping for incoming guests.</li>
+              <li class="rule-item">Valid government ID mandatory for each adult occupant upon check-in.</li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 style="font-size: 1.1rem; color: var(--text-heading); margin-bottom: 0.75rem;">Safety &amp; Decorum</h4>
+            <ul class="rules-list">
+              <li class="rule-item">Strictly non-smoking property in all bedrooms, hallways, and elevators.</li>
+              <li class="rule-item">Quiet hours observed between 10:30 PM and 06:00 AM for undisturbed guest sleep.</li>
+              <li class="rule-item">Non-staying visitors are permitted in the lobby area until 09:00 PM only.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div style="text-align: center; border-top: 1px solid var(--border-light); padding-top: 1.25rem;">
+          <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1rem;">
+            Have questions regarding pet policies, group arrangements, or custom needs?
+          </p>
+          <a href="contact.html" class="btn btn-outline-sm">Contact Front Desk &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="container" style="margin-block: 3.5rem 1.5rem;">
+    <div class="urgent-call-banner">
+      <div class="banner-content">
+        <span class="banner-tag">Easy Booking</span>
+        <h2 class="banner-title">Reserve A Clean Room Today</h2>
+        <p class="banner-desc">
+          Browse our 12 room categories or drop a quick enquiry. Our team is available 24 hours a day.
+        </p>
+      </div>
+      <div class="banner-actions">
+        <a href="rooms.html" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+          View Rooms &amp; Tariff
+        </a>
+        <a href="contact.html" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 1.75rem;">
+          Send Booking Enquiry &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo" style="margin-block-end: 1rem;">
+            <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="36" height="36" />
+            <span class="brand-name" style="color: #FFFFFF;">HavenNest Lodge</span>
+          </div>
+          <p class="footer-brand-desc">
+            Comfortable, spotless and welcoming budget hotel and lodge. High quality beds, hot showers, and honest pricing.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/login/" class="social-link" aria-label="Facebook Login" target="_blank" rel="noopener noreferrer" title="Facebook Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" class="social-link" aria-label="Instagram Login" target="_blank" rel="noopener noreferrer" title="Instagram Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login" class="social-link" aria-label="Twitter Login" target="_blank" rel="noopener noreferrer" title="Twitter / X Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 &ndash; Classic Lodge</a></li>
+            <li><a href="home-2.html">Home 2 &ndash; Transit Stay</a></li>
+            <li><a href="rooms.html">Rooms &amp; Tariff</a></li>
+            <li><a href="facilities.html">Lodge Facilities</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+            <li><a href="terms.html">Stay &amp; Cancellation Policies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Room Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="rooms.html?category=standard#rooms-filter-section" data-category="standard">Standard &amp; Budget</a></li>
+            <li><a href="rooms.html?category=deluxe#rooms-filter-section" data-category="deluxe">Deluxe &amp; Suites</a></li>
+            <li><a href="rooms.html?category=family#rooms-filter-section" data-category="family">Family Suites</a></li>
+            <li><a href="rooms.html?category=dormitory#rooms-filter-section" data-category="dormitory">Dorm Bunk Beds</a></li>
+            <li><a href="rooms.html?category=ac#rooms-filter-section" data-category="ac">AC Rooms</a></li>
+            <li><a href="rooms.html?category=non-ac#rooms-filter-section" data-category="non-ac">Non-AC Rooms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Tariff Alerts &amp; Offers</h4>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required />
+              <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1rem;">Join</button>
+            </div>
+            <span class="newsletter-note">Zero spam. You can unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> HavenNest Lodge &amp; Budget Hotel. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="terms.html">Cancellation Policy</a>
+          <a href="terms.html">ID Proof Rules</a>
+          <a href="terms.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Bar -->
+  <div class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+18004567890" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Enquiry</span>
+    </a>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JS Bundle -->
+  <script src="assets/js/data/images.js"></script>
+  <script src="assets/js/data/rooms-data.js"></script>
+  <script src="assets/js/modules/storage.js"></script>
+  <script src="assets/js/modules/toast.js"></script>
+  <script src="assets/js/modules/theme.js"></script>
+  <script src="assets/js/modules/rtl.js"></script>
+  <script src="assets/js/modules/lightbox.js"></script>
+  <script src="assets/js/modules/modal.js"></script>
+  <script src="assets/js/modules/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

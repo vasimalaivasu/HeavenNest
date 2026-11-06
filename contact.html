@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Booking Enquiry | HavenNest Lodge &amp; Budget Hotel</title>
+  <meta name="description" content="Send a direct room enquiry or contact our 24/7 front desk. Fast availability confirmation, transparent estimates, and zero booking fees." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- Structured Data for Contact Page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "HavenNest Lodge Booking Enquiry & Contact",
+    "description": "Direct room reservation enquiry and 24/7 front desk assistance.",
+    "mainEntity": {
+      "@type": "LodgingBusiness",
+      "name": "HavenNest Lodge & Budget Hotel",
+      "telephone": "+18004567890",
+      "email": "stay@havennestlodge.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Heritage Cross Road, Near Central Railway Station",
+        "addressLocality": "City Center",
+        "addressCountry": "US"
+      }
+    }
+  }
+  </script>
+  <!-- Prevent FOUC: Pre-apply saved Theme & RTL before render (Defaults to Light) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("haven_theme_mode");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        var rtl = localStorage.getItem("haven_rtl_pref");
+        if (rtl === "true") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="haven-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-name">HavenNest</span>
+          <span class="brand-tagline">Lodge &amp; Budget Hotel</span>
+        </div>
+      </a>
+      <!-- Desktop Nav with Home Dropdown -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1 &ndash; Classic Lodge</span>
+              <span class="dropdown-item-desc">Traditional budget hotel &amp; comprehensive room showcase</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">
+                Home 2 &ndash; Transit Hub
+                <span class="dropdown-badge">Popular</span>
+              </span>
+              <span class="dropdown-item-desc">Fast-track booking, live rate calculator &amp; railway transit hub</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="rooms.html" class="nav-link">Rooms &amp; Tariff</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="terms.html" class="nav-link">Policies</a>
+        <a href="contact.html" class="nav-link active">Contact</a>
+      </nav>
+      <div class="navbar-actions">
+        <!-- Currency Switcher -->
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
+          <span class="curr-label">$ USD</span>
+        </button>
+
+        <!-- LTR / RTL Toggle -->
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch between LTR and RTL">
+          <span class="rtl-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+          </span>
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book Enquiry</span>
+        </a>
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="32" height="32" />
+        <span class="brand-name">HavenNest</span>
+      </a>
+      <button type="button" class="drawer-close mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Mobile Quick Controls -->
+      <div class="drawer-controls-row">
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
+          <span class="curr-label">$ USD</span>
+        </button>
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="drawer-nav-link">Home 1 &ndash; Classic Lodge</a></li>
+        <li><a href="home-2.html" class="drawer-nav-link">Home 2 &ndash; Transit Hub</a></li>
+        <li><a href="rooms.html" class="drawer-nav-link">Rooms &amp; Tariff</a></li>
+        <li><a href="facilities.html" class="drawer-nav-link">Facilities</a></li>
+        <li><a href="blog.html" class="drawer-nav-link">Travel Blog &amp; Guides</a></li>
+        <li><a href="contact.html" class="drawer-nav-link active" aria-current="page">Contact &amp; Enquiry</a></li>
+        <li><a href="terms.html" class="drawer-nav-link">Stay Policies</a></li>
+      </ul>
+    </div>
+    <div class="drawer-footer">
+      <a href="contact.html" class="btn btn-primary btn-block">Send Booking Enquiry</a>
+      <a href="tel:+18004567890" class="btn btn-outline btn-block">Call Front Desk</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero & Breadcrumbs -->
+  <section class="page-hero" aria-label="Contact Header">
+    <div class="container">
+      <h1 class="page-title">Booking Enquiry &amp; Contact</h1>
+      <p class="page-subtitle">
+        Send a direct room enquiry below. We calculate live estimates with zero prepayment. Our front desk confirms your booking within 15 minutes.
+      </p>
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Contact &amp; Enquiry</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Contact & Booking Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="contact-layout-grid">
+
+        <!-- Left Column: Primary Conversion Element (Booking Enquiry Form) -->
+        <div>
+          <!-- Success Confirmation State (Hidden until submitted) -->
+          <div id="enquiry-success-card" class="enquiry-success-card" role="region" aria-live="polite">
+            <!-- Dynamically populated by enquiry-form.js -->
+          </div>
+
+          <!-- Main Booking Form Card -->
+          <div class="enquiry-form-card" id="enquiry-form-wrapper">
+            <div style="margin-bottom: 1.75rem;">
+              <span class="section-tag" style="margin-bottom: 0.5rem;">Direct Lodge Reservation</span>
+              <h2 style="font-size: 1.75rem; margin-bottom: 0.4rem;">Send A Booking Enquiry</h2>
+              <p style="font-size: 0.925rem; color: var(--text-muted);">
+                Fill in your expected stay dates and group details. We will reserve your room and call you to finalize check-in.
+              </p>
+            </div>
+
+            <form id="booking-enquiry-form" novalidate aria-label="Hotel Room Booking Enquiry Form">
+
+              <!-- Personal Information Row -->
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-name" class="form-label">Full Name <span style="color: var(--color-danger);">*</span></label>
+                  <input type="text" id="enquiry-name" class="form-control" placeholder="e.g. Johnathan Smith" required />
+                  <span id="error-enquiry-name" class="form-error">Please enter your full name (minimum 2 characters)</span>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-phone" class="form-label">Phone / WhatsApp Number <span style="color: var(--color-danger);">*</span></label>
+                  <input type="tel" id="enquiry-phone" class="form-control" placeholder="e.g. +1 555 123 4567" required />
+                  <span id="error-enquiry-phone" class="form-error">Please enter a valid phone number</span>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group">
+                <label for="enquiry-email" class="form-label">Email Address <span style="color: var(--color-danger);">*</span></label>
+                <input type="email" id="enquiry-email" class="form-control" placeholder="e.g. yourname@email.com" required />
+                <span id="error-enquiry-email" class="form-error">Please enter a valid email address</span>
+              </div>
+
+              <!-- Dates Row -->
+              <div class="form-row">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-checkin" class="form-label">Check-in Date <span style="color: var(--color-danger);">*</span></label>
+                  <input type="date" id="enquiry-checkin" class="form-control" required />
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-checkout" class="form-label">Check-out Date <span style="color: var(--color-danger);">*</span></label>
+                  <input type="date" id="enquiry-checkout" class="form-control" required />
+                </div>
+              </div>
+
+              <!-- Room Category & Preferred Room Type Selectors -->
+              <div class="form-row form-row-2">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-room-category" class="form-label">Room Category <span style="color: var(--color-danger);">*</span></label>
+                  <select id="enquiry-room-category" class="form-control">
+                    <option value="all">All Room Categories</option>
+                    <option value="standard" selected>Standard &amp; Budget</option>
+                    <option value="deluxe">Deluxe &amp; Suites</option>
+                    <option value="family">Family Suites</option>
+                    <option value="dormitory">Dormitory &amp; Pods</option>
+                  </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label for="enquiry-room-type" class="form-label">Preferred Room <span style="color: var(--color-danger);">*</span></label>
+                  <select id="enquiry-room-type" class="form-control">
+                    <!-- Populated dynamically by EnquiryEngine based on selected category -->
+                  </select>
+                </div>
+              </div>
+
+              <!-- Steppers Row (Rooms, Adults, Children) -->
+              <div class="form-row form-row-3">
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">No. of Rooms</label>
+                  <div class="stepper-control">
+                    <button type="button" class="stepper-btn" id="stepper-rooms-minus" aria-label="Decrease rooms">&minus;</button>
+                    <span class="stepper-value" id="stepper-rooms-val">1</span>
+                    <button type="button" class="stepper-btn" id="stepper-rooms-plus" aria-label="Increase rooms">&plus;</button>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Adults (12+ yrs)</label>
+                  <div class="stepper-control">
+                    <button type="button" class="stepper-btn" id="stepper-adults-minus" aria-label="Decrease adults">&minus;</button>
+                    <span class="stepper-value" id="stepper-adults-val">2</span>
+                    <button type="button" class="stepper-btn" id="stepper-adults-plus" aria-label="Increase adults">&plus;</button>
+                  </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label class="form-label">Children (&lt;12 yrs)</label>
+                  <div class="stepper-control">
+                    <button type="button" class="stepper-btn" id="stepper-children-minus" aria-label="Decrease children">&minus;</button>
+                    <span class="stepper-value" id="stepper-children-val">0</span>
+                    <button type="button" class="stepper-btn" id="stepper-children-plus" aria-label="Increase children">&plus;</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Cost Estimation Box -->
+              <div class="live-estimate-box" aria-live="polite">
+                <div class="estimate-meta">
+                  <span class="estimate-title">Estimated Tariff (<span id="enquiry-nights-count">1 Night</span>)</span>
+                  <span class="estimate-rate-note" id="estimate-room-rate">Calculating based on current rates...</span>
+                  <small style="color: var(--text-subtle); margin-top: 0.25rem;">Estimate only • Pay securely at check-in</small>
+                </div>
+                <div class="estimate-prices">
+                  <div class="estimate-highlight" id="estimate-usd-amount">$32</div>
+                  <div class="estimate-inr" id="estimate-inr-amount">₹1,899</div>
+                </div>
+              </div>
+
+              <!-- Stay Comfort & Food Add-ons (Optional) -->
+              <div class="form-group">
+                <label class="form-label">Stay Comfort &amp; Food Options (Optional)</label>
+                <div class="enquiry-addons-list">
+                  <label class="addon-checkbox-card" for="addon-breakfast">
+                    <input type="checkbox" id="addon-breakfast" />
+                    <div class="addon-card-text">
+                      <div class="addon-header-line">
+                        <strong class="addon-title">☕ Add Daily Hot Homestyle Breakfast</strong>
+                        <span class="badge badge-accent">+$3 / ₹150 per person/day</span>
+                      </div>
+                      <span class="addon-desc">Fresh Idli-Vada-Sambar, Poha, Aloo Parathas, or Toast &amp; Eggs with coffee/tea.</span>
+                    </div>
+                  </label>
+
+                  <label class="addon-checkbox-card" for="addon-bedding">
+                    <input type="checkbox" id="addon-bedding" />
+                    <div class="addon-card-text">
+                      <div class="addon-header-line">
+                        <strong class="addon-title">🛏️ Request Extra Pillows &amp; Fleece Blankets</strong>
+                        <span class="badge badge-success">Free Of Charge</span>
+                      </div>
+                      <span class="addon-desc">Prepared and placed in your room prior to your arrival.</span>
+                    </div>
+                  </label>
+
+                  <label class="addon-checkbox-card" for="addon-early">
+                    <input type="checkbox" id="addon-early" />
+                    <div class="addon-card-text">
+                      <div class="addon-header-line">
+                        <strong class="addon-title">🧳 Early Baggage Cloakroom Drop</strong>
+                        <span class="badge badge-success">Free Service</span>
+                      </div>
+                      <span class="addon-desc">Safe luggage holding if your train/bus arrives before 12:00 PM check-in time.</span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Special Requests -->
+              <div class="form-group">
+                <label for="enquiry-notes" class="form-label">Special Requests / Arrival Time Note (Optional)</label>
+                <textarea id="enquiry-notes" rows="3" class="form-control" placeholder="e.g. Expected late train arrival at 9 PM, quiet corner room preferred, extra towel set needed..."></textarea>
+              </div>
+
+              <!-- Consent Checkbox -->
+              <div class="form-group">
+                <label class="checkbox-label">
+                  <input type="checkbox" id="enquiry-consent" required checked />
+                  <span>I agree to receive a confirmation call or WhatsApp message regarding this booking enquiry from HavenNest Lodge.</span>
+                </label>
+                <span id="error-enquiry-consent" class="form-error">Please agree to receive booking confirmation.</span>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" class="btn btn-primary btn-block" style="padding-block: 0.95rem; font-size: 1.05rem;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                <span>Submit Booking Enquiry</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right Column: Contact Cards & Transit Info -->
+        <div class="contact-sidebar">
+
+          <!-- 24/7 Front Desk Card -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3 class="info-card-title">Front Desk Assistance</h3>
+                <span style="font-size: 0.8rem; color: var(--color-success); font-weight: 700;">● Online 24 Hours a Day</span>
+              </div>
+            </div>
+
+            <ul class="info-list">
+              <li class="info-list-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <strong>Phone (Click to call):</strong><br>
+                  <a href="tel:+18004567890" style="color: var(--brand-accent); font-weight: 700;">+1 (800) 456-7890</a> / <a href="tel:+919876543210" style="color: var(--brand-accent);">+91 98765 43210</a>
+                </div>
+              </li>
+              <li class="info-list-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2z"/></svg>
+                <div>
+                  <strong>Direct WhatsApp:</strong><br>
+                  <a href="https://wa.me/919876543210?text=Hi%20HavenNest%20Lodge%2C%20I%20have%20an%20enquiry%20regarding%20room%20availability" target="_blank" rel="noopener noreferrer" style="color: var(--brand-whatsapp); font-weight: 700;">Chat with Receptionist</a>
+                </div>
+              </li>
+              <li class="info-list-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <strong>Email:</strong><br>
+                  <a href="mailto:stay@havennestlodge.com" style="color: var(--brand-accent);">stay@havennestlodge.com</a>
+                </div>
+              </li>
+              <li class="info-list-item">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>
+                  <strong>Timings:</strong><br>
+                  Check-in: 12:00 PM | Check-out: 11:00 AM
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Physical Address Card -->
+          <div class="info-card">
+            <div class="info-card-header">
+              <div class="info-card-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h3 class="info-card-title">Property Location</h3>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Central Transit Hub</span>
+              </div>
+            </div>
+
+            <p style="font-size: 0.925rem; color: var(--text-main); margin-bottom: 1rem;">
+              <strong>HavenNest Lodge &amp; Budget Hotel</strong><br>
+              42 Heritage Cross Road, Opposite State Transport Bank,<br>
+              Near Central Railway Station (West Exit),<br>
+              City Center - 560001
+            </p>
+
+            <!-- Interactive Live Map Container -->
+            <div class="map-container" aria-label="Interactive Google Map of HavenNest Lodge">
+              <div class="map-live-badge">
+                <span class="map-live-dot"></span>
+                <span>Live Location Pin</span>
+              </div>
+              <iframe
+                src="https://maps.google.com/maps?q=12.9778,77.5726&amp;hl=en&amp;z=16&amp;output=embed"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="HavenNest Lodge Property Location &amp; Navigation Map">
+              </iframe>
+            </div>
+
+            <!-- Quick Navigation Action Toolbar -->
+            <div class="map-actions-toolbar">
+              <a href="https://www.google.com/maps/dir/?api=1&destination=12.9778,77.5726" target="_blank" rel="noopener noreferrer" class="map-action-btn btn-primary-action" title="Start live GPS turn-by-turn navigation">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+                Get Directions
+              </a>
+              <button type="button" class="map-action-btn" id="copy-address-btn" onclick="copyLodgeAddress()" title="Copy physical address to clipboard">
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                Copy Address
+              </button>
+            </div>
+          </div>
+
+          <!-- Transit Guide -->
+          <div class="info-card">
+            <h3 class="info-card-title" style="margin-bottom: 0.85rem;">How To Reach Us</h3>
+            <ul class="info-list">
+              <li class="info-list-item">
+                <span style="color: var(--brand-accent); font-weight: 800;">🚆</span>
+                <div><strong>By Train:</strong> Exit Central Railway Station platform 1, head 1.2 km west along Station Main Road (5 mins by auto-rickshaw).</div>
+              </li>
+              <li class="info-list-item">
+                <span style="color: var(--brand-accent); font-weight: 800;">🚌</span>
+                <div><strong>By Bus:</strong> 2.0 km from Interstate Bus Stand. Local town buses stop right at Heritage Cross junction.</div>
+              </li>
+              <li class="info-list-item">
+                <span style="color: var(--brand-accent); font-weight: 800;">✈️</span>
+                <div><strong>By Flight:</strong> 14.5 km from the airport. Airport taxis take roughly 25-30 minutes. Pickup can be arranged.</div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE MAP & TRANSIT NAVIGATION HUB
+       ========================================================================== -->
+  <section class="transit-map-section" aria-label="Interactive Navigation and Transit Hub">
+    <div class="container">
+      <div class="section-header text-center" style="max-width: 720px; margin-inline: auto; margin-bottom: 2.5rem;">
+        <span class="section-tag">Interactive Navigation Guide</span>
+        <h2 class="section-title">Effortless Arrival &amp; Transit Hub</h2>
+        <p class="section-subtitle">
+          Located right along the central transport corridor. Use this interactive live map to navigate directly to our 24/7 reception desk from any arrival station.
+        </p>
+      </div>
+
+      <div class="transit-map-grid">
+        <!-- Interactive Map Frame with Full Controls -->
+        <div class="transit-map-frame-wrapper">
+          <div class="map-live-badge" style="top: 14px; left: 14px;">
+            <span class="map-live-dot"></span>
+            <span>HavenNest Transit Lodge &bull; 24/7 Reception</span>
+          </div>
+          <iframe
+            src="https://maps.google.com/maps?q=12.9778,77.5726&amp;hl=en&amp;z=15&amp;output=embed"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Interactive Navigation Map for HavenNest Lodge">
+          </iframe>
+        </div>
+
+        <!-- Transit Connectivity & Live Direction Hub -->
+        <div class="transit-info-panel">
+          <h3 style="font-size: 1.35rem; color: var(--text-heading); margin-bottom: 0.5rem;">Prime Connectivity Distances</h3>
+          <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1.25rem;">
+            Whether arriving on a late-night express train or catching an early flight, our location offers immediate 24/7 auto, cab, and metro accessibility.
+          </p>
+
+          <div class="transit-hub-cards-grid">
+            <div class="transit-hub-card">
+              <div class="transit-hub-icon">🚆</div>
+              <div>
+                <div class="transit-hub-title">Central Railway Station</div>
+                <div class="transit-hub-meta"><strong>1.2 km</strong> &bull; 5 mins by auto / 12 min walk from West Exit</div>
+              </div>
+            </div>
+
+            <div class="transit-hub-card">
+              <div class="transit-hub-icon">🚇</div>
+              <div>
+                <div class="transit-hub-title">City Center Metro Station</div>
+                <div class="transit-hub-meta"><strong>600 meters</strong> &bull; 3 min walk (Green &amp; Purple Line Exchange)</div>
+              </div>
+            </div>
+
+            <div class="transit-hub-card">
+              <div class="transit-hub-icon">🚌</div>
+              <div>
+                <div class="transit-hub-title">Interstate Bus Terminus</div>
+                <div class="transit-hub-meta"><strong>2.0 km</strong> &bull; 8 mins via Station Link Road &bull; 24/7 buses</div>
+              </div>
+            </div>
+
+            <div class="transit-hub-card">
+              <div class="transit-hub-icon">✈️</div>
+              <div>
+                <div class="transit-hub-title">International Airport</div>
+                <div class="transit-hub-meta"><strong>14.5 km</strong> &bull; 25-30 mins via Express Elevated Corridor</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1.25rem;">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=12.9778,77.5726" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 1.35rem;">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Start Live Navigation
+            </a>
+            <a href="https://maps.google.com/?q=12.9778,77.5726" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="padding: 0.75rem 1.25rem;">
+              Open in Google Maps &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact FAQ Accordion -->
+  <section class="section-padding" style="background-color: var(--bg-subtle);" aria-label="Enquiry Questions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Booking Questions</span>
+        <h2 class="section-title">Enquiry &amp; Payment FAQs</h2>
+        <p class="section-subtitle">
+          Common queries about making enquiries, room holds, and payment options.
+        </p>
+      </div>
+
+      <div class="accordion-group">
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" aria-controls="cenq-faq-1">
+            <span>How fast will someone contact me after I submit this form?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="cenq-faq-1" class="accordion-panel">
+            <div class="accordion-content">
+              Our front desk receptionist reviews incoming enquiries continuously 24 hours a day. You will receive a direct telephone call or WhatsApp message within <strong>15 minutes</strong> during the day, or within 30 minutes during late-night hours.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" aria-controls="cenq-faq-2">
+            <span>Is my room guaranteed once I submit the form?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="cenq-faq-2" class="accordion-panel">
+            <div class="accordion-content">
+              The enquiry form places a temporary hold on the selected room type. Once our receptionist speaks with you to confirm your expected check-in time, your reservation is fully locked in with zero cancellation fee.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" aria-controls="cenq-faq-3">
+            <span>What payment methods are supported at check-in?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="cenq-faq-3" class="accordion-panel">
+            <div class="accordion-content">
+              We accept Indian Rupees (INR Cash), International Credit/Debit Cards (Visa, MasterCard, Rupay, Amex), UPI QR code payments (Google Pay, PhonePe, Paytm), and Net Banking. Official tax invoices are provided instantly.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-header" aria-expanded="false" aria-controls="cenq-faq-4">
+            <span>Can I request extra pillows, blankets, or early breakfast?</span>
+            <svg class="accordion-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div id="cenq-faq-4" class="accordion-panel">
+            <div class="accordion-content">
+              Yes, easily! You can select the "Stay Comfort &amp; Food Options" checkboxes on the enquiry form above or mention your requests in the notes. Extra microfiber pillows and warm fleece blankets are arranged in your room free of charge prior to arrival, and fresh homestyle breakfast or early morning filter coffee will be ready when you wake up.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand-logo" style="margin-block-end: 1rem;">
+            <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="36" height="36" />
+            <span class="brand-name" style="color: #FFFFFF;">HavenNest Lodge</span>
+          </div>
+          <p class="footer-brand-desc">
+            Comfortable, spotless and welcoming budget hotel and lodge. High quality beds, hot showers, and honest pricing.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/login/" class="social-link" aria-label="Facebook Login" target="_blank" rel="noopener noreferrer" title="Facebook Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" class="social-link" aria-label="Instagram Login" target="_blank" rel="noopener noreferrer" title="Instagram Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login" class="social-link" aria-label="Twitter Login" target="_blank" rel="noopener noreferrer" title="Twitter / X Login">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 &ndash; Classic Lodge</a></li>
+            <li><a href="home-2.html">Home 2 &ndash; Transit Stay</a></li>
+            <li><a href="rooms.html">Rooms &amp; Tariff</a></li>
+            <li><a href="facilities.html">Lodge Facilities</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Contact &amp; Enquiry</a></li>
+            <li><a href="terms.html">Stay &amp; Cancellation Policies</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Room Categories</h4>
+          <ul class="footer-links-list">
+            <li><a href="rooms.html?category=standard#rooms-filter-section" data-category="standard">Standard &amp; Budget</a></li>
+            <li><a href="rooms.html?category=deluxe#rooms-filter-section" data-category="deluxe">Deluxe &amp; Suites</a></li>
+            <li><a href="rooms.html?category=family#rooms-filter-section" data-category="family">Family Suites</a></li>
+            <li><a href="rooms.html?category=dormitory#rooms-filter-section" data-category="dormitory">Dorm Bunk Beds</a></li>
+            <li><a href="rooms.html?category=ac#rooms-filter-section" data-category="ac">AC Rooms</a></li>
+            <li><a href="rooms.html?category=non-ac#rooms-filter-section" data-category="non-ac">Non-AC Rooms</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Tariff Alerts &amp; Offers</h4>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <div class="newsletter-input-group">
+              <input type="email" placeholder="Your email address" class="newsletter-input" required />
+              <button type="submit" class="btn btn-primary" style="padding: 0.65rem 1rem;">Join</button>
+            </div>
+            <span class="newsletter-note">Zero spam. You can unsubscribe anytime.</span>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; <span id="current-year">2026</span> HavenNest Lodge &amp; Budget Hotel. All rights reserved.</div>
+        <div class="footer-legal-links">
+          <a href="terms.html">Cancellation Policy</a>
+          <a href="terms.html">ID Proof Rules</a>
+          <a href="terms.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile Bottom Bar -->
+  <div class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+18004567890" class="btn btn-secondary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Enquiry</span>
+    </a>
+  </div>
+
+  <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JS Bundle -->
+  <script src="assets/js/data/images.js"></script>
+  <script src="assets/js/data/rooms-data.js"></script>
+  <script src="assets/js/modules/storage.js"></script>
+  <script src="assets/js/modules/toast.js"></script>
+  <script src="assets/js/modules/theme.js"></script>
+  <script src="assets/js/modules/rtl.js"></script>
+  <script src="assets/js/modules/lightbox.js"></script>
+  <script src="assets/js/modules/modal.js"></script>
+  <script src="assets/js/modules/enquiry-form.js"></script>
+  <script src="assets/js/modules/navigation.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

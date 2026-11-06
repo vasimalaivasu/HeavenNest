@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Travel Blog &amp; Budget Lodging Guides | HavenNest Lodge</title>
+  <meta name="description" content="Discover smart travel hacks, street food guides, transit directions, packing checklists, and local attractions from the hospitality team at HavenNest Lodge." />
+  <meta name="keywords" content="budget hotel blog, transit lodging tips, street food guide, packing checklist, budget travel hacks, hotel check-in guide" />
+  <meta name="author" content="HavenNest Lodge &amp; Budget Hotel" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Travel Blog &amp; Budget Lodging Guides | HavenNest Lodge" />
+  <meta property="og:description" content="Insider tips, local food recommendations, transit directions, and smart ways to travel comfortably on a sensible budget." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1200&q=80" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/logo-icon.svg" />
+
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- JSON-LD Structured Data for Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "HavenNest Lodge Travel & Lodging Blog",
+    "description": "Smart travel hacks, street food guides, transit directions, and budget lodging tips.",
+    "url": "https://haven-nest-lodge.com/blog.html",
+    "publisher": {
+      "@type": "LodgingBusiness",
+      "name": "HavenNest Lodge & Budget Hotel",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "42 Heritage Cross Road, Near Central Station",
+        "addressLocality": "City Center",
+        "addressCountry": "US"
+      }
+    }
+  }
+  </script>
+  <!-- Prevent FOUC: Pre-apply saved Theme & RTL before render (Defaults to Light) -->
+  <script>
+    (function () {
+      try {
+        var theme = localStorage.getItem("haven_theme_mode");
+        if (theme === "dark") {
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+        var rtl = localStorage.getItem("haven_rtl_pref");
+        if (rtl === "true") {
+          document.documentElement.setAttribute("dir", "rtl");
+        }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION BAR
+       ========================================================================== -->
+  <header class="haven-navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" class="brand-logo-img" />
+        <div class="brand-text-block">
+          <span class="brand-name">HavenNest</span>
+          <span class="brand-tagline">Lodge &amp; Budget Hotel</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <!-- Desktop Nav with Home Dropdown -->
+      <nav class="navbar-nav" aria-label="Main Navigation">
+        <div class="nav-dropdown">
+          <a href="javascript:void(0)" class="nav-link nav-dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
+            <span>Home</span>
+            <svg class="dropdown-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html" class="dropdown-item">
+              <span class="dropdown-item-title">Home 1 &ndash; Classic Lodge</span>
+              <span class="dropdown-item-desc">Traditional budget hotel &amp; comprehensive room showcase</span>
+            </a>
+            <a href="home-2.html" class="dropdown-item">
+              <span class="dropdown-item-title">
+                Home 2 &ndash; Transit Hub
+                <span class="dropdown-badge">Popular</span>
+              </span>
+              <span class="dropdown-item-desc">Fast-track booking, live rate calculator &amp; railway transit hub</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="rooms.html" class="nav-link">Rooms &amp; Tariff</a>
+        <a href="facilities.html" class="nav-link">Facilities</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="terms.html" class="nav-link">Policies</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Actions -->
+      <div class="navbar-actions">
+        <!-- Currency Switcher -->
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
+          <span class="curr-label">$ USD</span>
+        </button>
+
+        <!-- LTR / RTL Toggle -->
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout" title="Switch between LTR and RTL">
+          <span class="rtl-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h14"/></svg>
+          </span>
+          <span class="rtl-label">RTL</span>
+        </button>
+
+        <!-- Dark / Light Theme Toggle -->
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+
+        <a href="contact.html" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Book Enquiry</span>
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button type="button" class="mobile-menu-toggle" aria-label="Open mobile menu" aria-expanded="false">
+          <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER MENU
+       ========================================================================== -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" aria-label="HavenNest Lodge Home">
+        <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="32" height="32" />
+        <span class="brand-name">HavenNest</span>
+      </a>
+      <button type="button" class="drawer-close mobile-drawer-close" aria-label="Close menu">&times;</button>
+    </div>
+    <div class="drawer-body">
+      <!-- Mobile Quick Controls -->
+      <div class="drawer-controls-row">
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
+          <span class="curr-label">$ USD</span>
+        </button>
+        <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
+          <span class="rtl-label">RTL</span>
+        </button>
+        <button type="button" class="nav-control-btn theme-toggle-btn" aria-label="Toggle Dark/Light Mode">
+          <span class="theme-icon">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </span>
+          <span class="theme-label">Dark</span>
+        </button>
+      </div>
+      <ul class="drawer-nav-list">
+        <li><a href="index.html" class="drawer-nav-link">Home 1 &ndash; Classic Lodge</a></li>
+        <li><a href="home-2.html" class="drawer-nav-link">Home 2 &ndash; Transit Hub</a></li>
+        <li><a href="rooms.html" class="drawer-nav-link">Rooms &amp; Tariff</a></li>
+        <li><a href="facilities.html" class="drawer-nav-link">Facilities</a></li>
+        <li><a href="blog.html" class="drawer-nav-link active" aria-current="page">Travel Blog &amp; Guides</a></li>
+        <li><a href="contact.html" class="drawer-nav-link">Contact &amp; Enquiry</a></li>
+        <li><a href="terms.html" class="drawer-nav-link">Stay Policies</a></li>
+      </ul>
+    </div>
+    <div class="drawer-footer">
+      <a href="contact.html" class="btn btn-primary btn-block">Send Booking Enquiry</a>
+      <a href="tel:+18004567890" class="btn btn-outline btn-block">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call Front Desk
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PAGE HERO & BREADCRUMBS
+       ========================================================================== -->
+  <section class="page-hero" aria-label="Travel Blog Hero">
+    <div class="container hero-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span aria-current="page">Travel Blog &amp; Guides</span>
+      </nav>
+      <h1 class="page-title">Travel Stories &amp; Budget Lodging Guides</h1>
+      <p class="page-subtitle">
+        Insider tips, local food recommendations, transit directions, and smart ways to travel comfortably on a sensible budget.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       BLOG MAIN CONTENT SECTION
+       ========================================================================== -->
+  <section class="section-padding" aria-label="Blog Articles Feed">
+    <div class="container">
+
+      <!-- Featured Story Banner -->
+      <div id="featured-blog-container"></div>
+
+      <!-- Category Filter Pills & Search Bar -->
+      <div class="blog-controls-bar">
+        <!-- Filter Tabs -->
+        <div class="gallery-filter-tabs" style="margin-bottom: 0;" role="tablist">
+          <button type="button" class="gallery-filter-tab blog-filter-tab active" data-category="all" role="tab" aria-selected="true">All Guides (6)</button>
+          <button type="button" class="gallery-filter-tab blog-filter-tab" data-category="budget-tips" role="tab" aria-selected="false">Budget Travel Tips</button>
+          <button type="button" class="gallery-filter-tab blog-filter-tab" data-category="food-transit" role="tab" aria-selected="false">Food &amp; Transit</button>
+          <button type="button" class="gallery-filter-tab blog-filter-tab" data-category="hotel-guides" role="tab" aria-selected="false">Hotel &amp; Lodge Guides</button>
+          <button type="button" class="gallery-filter-tab blog-filter-tab" data-category="attractions" role="tab" aria-selected="false">Local Attractions</button>
+        </div>
+
+        <!-- Search Input -->
+        <div class="blog-search-wrap">
+          <svg class="blog-search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="blog-search-input" class="blog-search-input" placeholder="Search guides, packing tips..." aria-label="Search travel guides" />
+        </div>
+      </div>
+
+      <!-- Count meta -->
+      <div style="margin-block-end: 1.5rem; display: flex; align-items: center; justify-content: space-between;">
+        <span id="blog-count-display" style="font-size: 0.875rem; color: var(--text-muted); font-weight: 600;">
+          Showing 6 articles
+        </span>
+        <span style="font-size: 0.825rem; color: var(--text-subtle);">
+          Click any card to read the full guide
+        </span>
+      </div>
+
+      <!-- Main Layout: Articles Feed + Sidebar -->
+      <div class="blog-layout-grid">
+        <!-- Main Column: Posts Grid -->
+        <div class="blog-posts-grid" id="blog-posts-grid">
+          <!-- Populated dynamically by blog.js -->
+        </div>
+
+        <!-- Sidebar Column -->
+        <aside class="blog-sidebar" aria-label="Blog Sidebar">
+          <!-- Widget 1: Categories -->
+          <div class="blog-sidebar-widget">
+            <h3 class="widget-title">
+              <span>Explore Categories</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+            </h3>
+            <ul class="category-list-widget">
+              <li class="category-list-item">
+                <a href="javascript:void(0)" onclick="BlogEngine.setCategory('budget-tips'); document.querySelectorAll('.blog-filter-tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-category') === 'budget-tips'));">
+                  <span>Budget Travel Tips</span>
+                  <span class="category-count-badge">1</span>
+                </a>
+              </li>
+              <li class="category-list-item">
+                <a href="javascript:void(0)" onclick="BlogEngine.setCategory('food-transit'); document.querySelectorAll('.blog-filter-tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-category') === 'food-transit'));">
+                  <span>Food &amp; Transit Guides</span>
+                  <span class="category-count-badge">2</span>
+                </a>
+              </li>
+              <li class="category-list-item">
+                <a href="javascript:void(0)" onclick="BlogEngine.setCategory('hotel-guides'); document.querySelectorAll('.blog-filter-tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-category') === 'hotel-guides'));">
+                  <span>Hotel &amp; Lodge Guides</span>
+                  <span class="category-count-badge">2</span>
+                </a>
+              </li>
+              <li class="category-list-item">
+                <a href="javascript:void(0)" onclick="BlogEngine.setCategory('attractions'); document.querySelectorAll('.blog-filter-tab').forEach(t => t.classList.toggle('active', t.getAttribute('data-category') === 'attractions'));">
+                  <span>Local Attractions &amp; Culture</span>
+                  <span class="category-count-badge">1</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Widget 2: Popular Guides -->
+          <div class="blog-sidebar-widget">
+            <h3 class="widget-title">
+              <span>Popular Guides</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </h3>
+            <div class="recent-posts-list">
+              <div class="recent-post-item">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=150&q=80" alt="Street Food" class="recent-post-thumb" />
+                <div class="recent-post-info">
+                  <a href="javascript:void(0)" class="recent-post-title open-article-btn" data-id="local-street-food-and-cafes-near-haven-nest">
+                    Local Street Food &amp; Authentic Cafes Near Lodge
+                  </a>
+                  <span class="recent-post-date">4 min read • Oct 28, 2026</span>
+                </div>
+              </div>
+              <div class="recent-post-item">
+                <img src="https://images.unsplash.com/photo-1494515843206-f3117d3f51b7?auto=format&fit=crop&w=150&q=80" alt="Transit Directions" class="recent-post-thumb" />
+                <div class="recent-post-info">
+                  <a href="javascript:void(0)" class="recent-post-title open-article-btn" data-id="how-to-reach-haven-nest-from-railway-and-airport">
+                    How to Reach HavenNest: Train &amp; Airport Directions
+                  </a>
+                  <span class="recent-post-date">5 min read • Oct 15, 2026</span>
+                </div>
+              </div>
+              <div class="recent-post-item">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=150&q=80" alt="Check In Guide" class="recent-post-thumb" />
+                <div class="recent-post-info">
+                  <a href="javascript:void(0)" class="recent-post-title open-article-btn" data-id="what-to-expect-at-lodge-check-in-guide">
+                    First Time at a Lodge? What to Expect at Check-In
+                  </a>
+                  <span class="recent-post-date">4 min read • Sep 30, 2026</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Widget 3: Transit Helpline & Support -->
+          <div class="blog-sidebar-widget" style="background: linear-gradient(135deg, rgba(26,78,102,0.08) 0%, rgba(217,107,39,0.08) 100%); border-color: var(--border-medium);">
+            <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem;">
+              <span class="pulse-dot"></span>
+              <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--brand-accent); letter-spacing: 0.05em;">24/7 Front Desk Help</span>
+            </div>
+            <h4 style="font-size: 1.15rem; font-weight: 800; color: var(--text-heading); margin-bottom: 0.5rem;">Arriving Late in the City?</h4>
+            <p style="font-size: 0.875rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem;">
+              Call our reception directly if you need live directions, late night check-in guidance, or luggage holding assistance.
+            </p>
+            <a href="tel:+18004567890" class="btn btn-outline btn-block" style="background: var(--bg-surface);">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+1 (800) 456-7890</span>
+            </a>
+          </div>
+
+          <!-- Widget 4: Newsletter -->
+          <div class="blog-sidebar-widget">
+            <h3 class="widget-title">
+              <span>Travel Newsletter</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+              Subscribe to get monthly packing checklists, transit advisories, and exclusive early booking discounts.
+            </p>
+            <form id="blog-newsletter-form" class="newsletter-form">
+              <input type="email" class="form-control" placeholder="Your email address" required style="font-size: 0.875rem;" />
+              <button type="submit" class="btn btn-primary btn-block" style="padding: 0.65rem 1rem;">
+                Subscribe Free
+              </button>
+            </form>
+          </div>
+        </aside>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE FULL ARTICLE READER MODAL
+       ========================================================================== -->
+  <div class="blog-modal" id="blog-reader-modal" aria-hidden="true" role="dialog" aria-labelledby="modal-blog-title">
+    <div class="blog-modal-backdrop"></div>
+    <div class="blog-modal-dialog">
+      <button type="button" class="blog-modal-close-btn" aria-label="Close article reader">&times;</button>
+      <div class="blog-modal-scroll">
+        <!-- Cover Photo -->
+        <div class="modal-article-media">
+          <img src="" alt="" id="modal-blog-img" class="modal-article-img" />
+        </div>
+
+        <!-- Meta Header -->
+        <div class="blog-meta-row" style="margin-bottom: 0.75rem;">
+          <span class="badge badge-accent" id="modal-blog-category">Category</span>
+          <span class="blog-meta-dot">•</span>
+          <span class="blog-meta-time" id="modal-blog-readtime">5 min read</span>
+          <span class="blog-meta-dot">•</span>
+          <span id="modal-blog-date">Date</span>
+        </div>
+
+        <h2 class="modal-article-title" id="modal-blog-title">Article Title</h2>
+
+        <!-- Author Byline -->
+        <div style="display: flex; align-items: center; gap: 0.85rem; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-light);">
+          <img src="" alt="" id="modal-blog-author-img" class="author-avatar-img" />
+          <div>
+            <span class="author-name" id="modal-blog-author-name">Author Name</span>
+            <span class="author-role" id="modal-blog-author-role">Author Role</span>
+          </div>
+        </div>
+
+        <!-- Full HTML Content -->
+        <div class="modal-article-body" id="modal-blog-body">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Tags -->
+        <div class="modal-article-tags" id="modal-blog-tags">
+          <!-- Tag chips -->
+        </div>
+
+        <!-- Modal Footer Actions -->
+        <div class="modal-article-footer">
+          <div style="display: flex; gap: 0.5rem;">
+            <button type="button" class="btn btn-outline btn-sm" id="modal-blog-share-btn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+              <span>Share Article</span>
+            </button>
+          </div>
+          <a href="contact.html" class="btn btn-primary btn-sm">
+            <span>Book Your Stay with Us</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       URGENT CALL BANNER
+       ========================================================================== -->
+  <section class="container" style="margin-block: 3.5rem 1.5rem;">
+    <div class="urgent-call-banner">
+      <div class="banner-content">
+        <span class="banner-tag">
+          <span class="pulse-dot"></span>
+          <span>Instant Assistance</span>
+        </span>
+        <h2 class="banner-title">Need a clean, comfortable room tonight?</h2>
+        <p class="banner-desc">
+          Front desk is staffed 24/7. Walk-ins and urgent enquiries are always welcome with instant room allocation.
+        </p>
+      </div>
+      <div class="banner-actions">
+        <a href="tel:+18004567890" class="btn btn-outline" style="color: #FFFFFF; border-color: rgba(255,255,255,0.4);">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Call: +1 (800) 456-7890</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary" style="font-size: 1.05rem; padding: 0.9rem 1.75rem;">
+          <span>Send Booking Enquiry</span>
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="haven-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-block-end: 1rem;">
+            <img src="assets/images/logo-icon.svg" alt="HavenNest Logo" width="36" height="36" />
+            <span class="brand-name" style="color: #FFFFFF;">HavenNest Lodge</span>
+          </div>
+          <p class="footer-brand-desc">
+            Comfortable, clean and honest hospitality for smart travelers, transit guests, and families. No hidden charges, just genuine comfort and 24/7 care.
+          </p>
+          <div class="footer-social-links">
+            <a href="https://www.facebook.com/login/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/accounts/login/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com/i/flow/login" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links-list">
+            <li><a href="index.html">Home 1 &ndash; Classic Lodge</a></li>
+            <li><a href="home-2.html">Home 2 &ndash; Transit Stay</a></li>
+            <li><a href="rooms.html">Rooms &amp; Tariff</a></li>
+            <li><a href="facilities.html">Property Facilities</a></li>
+            <li><a href="blog.html">Travel Blog &amp; Guides</a></li>
+            <li><a href="contact.html">Check Availability</a></li>
+            <li><a href="terms.html">Guest Policies &amp; Terms</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Room Categories -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Room Categories</h3>
+          <ul class="footer-links-list">
+            <li><a href="rooms.html?category=standard#rooms-filter-section" data-category="standard">Standard &amp; Budget</a></li>
+            <li><a href="rooms.html?category=deluxe#rooms-filter-section" data-category="deluxe">Deluxe &amp; Suites</a></li>
+            <li><a href="rooms.html?category=family#rooms-filter-section" data-category="family">Family Suites</a></li>
+            <li><a href="rooms.html?category=dormitory#rooms-filter-section" data-category="dormitory">Dorm Bunk Beds</a></li>
+            <li><a href="rooms.html?category=ac#rooms-filter-section" data-category="ac">AC Rooms</a></li>
+            <li><a href="rooms.html?category=non-ac#rooms-filter-section" data-category="non-ac">Non-AC Rooms</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter & Contact -->
+        <div class="footer-col">
+          <h3 class="footer-heading">Contact Info</h3>
+          <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.9rem; color: #94A3B8;">
+            <p><strong>Address:</strong> 42 Heritage Cross Road, Near Central Station, City Center</p>
+            <p><strong>Front Desk:</strong> 24 Hours Open Daily</p>
+            <p><strong>Phone:</strong> <a href="tel:+18004567890" style="color: #FFFFFF;">+1 (800) 456-7890</a></p>
+            <p><strong>Email:</strong> <a href="mailto:stay@havennestlodge.com" style="color: #FFFFFF;">stay@havennestlodge.com</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <p>&copy; 2026 HavenNest Lodge &amp; Budget Hotel. All rights reserved.</p>
+        <div class="footer-legal-links">
+          <a href="terms.html">Cancellation Policy</a>
+          <a href="terms.html#id-proof">ID Proof Norms</a>
+          <a href="terms.html#privacy">Privacy Policy</a>
+          <a href="docs/index.html">Documentation</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       STICKY BOTTOM MOBILE ACTION BAR
+       ========================================================================== -->
+  <div class="mobile-bottom-bar" aria-label="Quick Mobile Actions">
+    <a href="tel:+18004567890" class="btn btn-outline">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Desk</span>
+    </a>
+    <a href="contact.html" class="btn btn-primary">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <span>Book Enquiry</span>
+    </a>
+  </div>
+
+  <!-- Back To Top Button -->
+  <button type="button" class="back-to-top" id="back-to-top-btn" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- JavaScript Application Bundle -->
+  <script src="assets/js/data/images.js"></script>
+  <script src="assets/js/data/rooms-data.js"></script>
+  <script src="assets/js/data/blog-data.js"></script>
+  <script src="assets/js/modules/storage.js"></script>
+  <script src="assets/js/modules/toast.js"></script>
+  <script src="assets/js/modules/theme.js"></script>
+  <script src="assets/js/modules/rtl.js"></script>
+  <script src="assets/js/modules/lightbox.js"></script>
+  <script src="assets/js/modules/modal.js"></script>
+  <script src="assets/js/modules/navigation.js"></script>
+  <script src="assets/js/modules/blog.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
