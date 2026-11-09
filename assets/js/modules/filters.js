@@ -149,8 +149,14 @@ const RoomsFilter = (function () {
   }
 
   let isAutoScrollPaused = false;
-  let isManuallyPaused = false;
   let autoscrollTimer = null;
+  let pauseTemporarily = function (ms = 2200) {
+    isAutoScrollPaused = true;
+    if (autoscrollTimer) clearTimeout(autoscrollTimer);
+    autoscrollTimer = setTimeout(() => {
+      isAutoScrollPaused = false;
+    }, ms);
+  };
 
   function scrollToSection() {
     const sec = document.getElementById("rooms-filter-section") || document.getElementById("room-filter-track");
@@ -181,10 +187,15 @@ const RoomsFilter = (function () {
 
     // Scroll tab track so the active tab is revealed
     if (track) {
-      const activeTab = track.querySelector(".room-filter-tab.active:not([data-is-clone])");
+      const activeTab = track.querySelector(`.room-filter-tab[data-category="${currentCategory}"]:not([data-is-clone])`) ||
+                        track.querySelector(`.room-filter-tab[data-category="${currentCategory}"]`);
       if (activeTab) {
         pauseTemporarily(3500);
-        activeTab.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" });
+        const tabLeft = activeTab.offsetLeft;
+        const tabWidth = activeTab.offsetWidth;
+        const trackWidth = track.clientWidth;
+        const targetScroll = tabLeft - (trackWidth / 2) + (tabWidth / 2);
+        track.scrollTo({ left: Math.max(0, targetScroll), behavior: "smooth" });
       }
     }
 
@@ -200,22 +211,42 @@ const RoomsFilter = (function () {
         } else if (shouldScroll) {
           scrollToSection();
         }
-      }, 120);
+      }, 150);
     } else if (shouldScroll) {
-      scrollToSection();
+      requestAnimationFrame(() => {
+        setTimeout(scrollToSection, 80);
+      });
     }
   }
 
   function handleUrlParams(shouldScroll = true) {
     const params = new URLSearchParams(window.location.search);
-    const catParam = params.get("category");
-    const roomParam = params.get("room");
+    let catParam = params.get("category");
+    let roomParam = params.get("room");
+
+    if (!catParam && window.location.hash) {
+      const hashStr = window.location.hash;
+      const qIdx = hashStr.indexOf("?");
+      const queryStr = qIdx !== -1 ? hashStr.substring(qIdx + 1) : hashStr.replace(/^#/, "");
+      const hashParams = new URLSearchParams(queryStr);
+      if (hashParams.has("category")) catParam = hashParams.get("category");
+      if (hashParams.has("room")) roomParam = hashParams.get("room");
+    }
 
     let resolvedCategory = null;
     let resolvedRoom = roomParam;
 
     if (catParam) {
       resolvedCategory = catParam.toLowerCase().trim();
+      if (resolvedCategory === "dorm" || resolvedCategory === "dormitory-bed" || resolvedCategory === "pods") {
+        resolvedCategory = "dormitory";
+      } else if (resolvedCategory === "budget") {
+        resolvedCategory = "standard";
+      } else if (resolvedCategory === "suites" || resolvedCategory === "deluxe-suites") {
+        resolvedCategory = "deluxe";
+      } else if (resolvedCategory === "nonac" || resolvedCategory === "non_ac") {
+        resolvedCategory = "non-ac";
+      }
     } else if (roomParam && typeof ROOMS_DATA !== "undefined") {
       const r = ROOMS_DATA.find((x) => x.id === roomParam);
       if (r) {
@@ -244,17 +275,28 @@ const RoomsFilter = (function () {
         let room = link.getAttribute("data-room");
 
         if (!cat) {
-          try {
-            const url = new URL(link.href, window.location.origin);
-            cat = url.searchParams.get("category");
-            room = url.searchParams.get("room");
-          } catch (err) {}
+          const match = href.match(/[?&#]category=([^&#]+)/i);
+          if (match) cat = decodeURIComponent(match[1]);
+          const roomMatch = href.match(/[?&#]room=([^&#]+)/i);
+          if (roomMatch) room = decodeURIComponent(roomMatch[1]);
         }
 
         if (cat) {
+          cat = cat.toLowerCase().trim();
+          if (cat === "dorm" || cat === "pods") cat = "dormitory";
+          if (cat === "nonac" || cat === "non_ac") cat = "non-ac";
+          if (cat === "budget") cat = "standard";
+          if (cat === "suites") cat = "deluxe";
+
           setCategory(cat, room, true);
           const newUrl = `rooms.html?category=${encodeURIComponent(cat)}${room ? `&room=${encodeURIComponent(room)}` : ""}#rooms-filter-section`;
-          window.history.pushState({ category: cat, room: room }, "", newUrl);
+          try {
+            window.history.pushState({ category: cat, room: room }, "", newUrl);
+          } catch (err) {
+            try {
+              window.location.hash = "rooms-filter-section";
+            } catch (e2) {}
+          }
         }
       }
     });
@@ -273,7 +315,6 @@ const RoomsFilter = (function () {
     const track = document.getElementById("room-filter-track");
     const prevBtn = document.getElementById("rooms-filter-prev");
     const nextBtn = document.getElementById("rooms-filter-next");
-    const toggleBtn = document.getElementById("rooms-autoscroll-toggle");
     if (!track) return;
 
     // 1. Seamless infinite loop: clone original filter tabs once
@@ -311,42 +352,17 @@ const RoomsFilter = (function () {
     const pixelsPerSecond = 34; // gentle, readable auto-scroll speed (~34px / sec)
     let lastTime = performance.now();
 
-    function pauseTemporarily(ms = 2200) {
-      if (isManuallyPaused) return;
+    pauseTemporarily = function (ms = 2200) {
       isAutoScrollPaused = true;
       if (autoscrollTimer) clearTimeout(autoscrollTimer);
       autoscrollTimer = setTimeout(() => {
-        if (!isUserHovering && !isUserTouching && !isFocused && !isManuallyPaused) {
+        if (!isUserHovering && !isUserTouching && !isFocused) {
           isAutoScrollPaused = false;
-          virtualScrollPos = track.scrollLeft;
+          if (track) virtualScrollPos = track.scrollLeft;
           lastTime = performance.now();
         }
       }, ms);
-    }
-
-    function updateToggleButton() {
-      if (!toggleBtn) return;
-      const stopped = isManuallyPaused;
-      toggleBtn.classList.toggle("is-paused", stopped);
-      toggleBtn.setAttribute("aria-label", stopped ? "Resume auto-scrolling filters" : "Pause auto-scrolling filters");
-      toggleBtn.setAttribute("title", stopped ? "Play auto-scroll" : "Pause auto-scroll");
-      toggleBtn.innerHTML = stopped
-        ? '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"/></svg>'
-        : '<svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>';
-    }
-
-    if (toggleBtn) {
-      toggleBtn.addEventListener("click", () => {
-        isManuallyPaused = !isManuallyPaused;
-        isAutoScrollPaused = isManuallyPaused;
-        if (!isManuallyPaused) {
-          virtualScrollPos = track.scrollLeft;
-          lastTime = performance.now();
-        }
-        updateToggleButton();
-      });
-      updateToggleButton();
-    }
+    };
 
     // Manual navigation buttons
     if (prevBtn) {
@@ -425,7 +441,7 @@ const RoomsFilter = (function () {
       const dt = (now - lastTime) / 1000;
       lastTime = now;
 
-      const shouldScroll = !isAutoScrollPaused && !isManuallyPaused && !prefersReducedMotion && dt < 0.25;
+      const shouldScroll = !isAutoScrollPaused && !prefersReducedMotion && dt < 0.25;
 
       if (shouldScroll) {
         offsetDiff = getOffsetDiff();
@@ -437,7 +453,7 @@ const RoomsFilter = (function () {
           }
           track.scrollLeft = virtualScrollPos;
         }
-      } else if (isAutoScrollPaused || isManuallyPaused) {
+      } else if (isAutoScrollPaused) {
         virtualScrollPos = track.scrollLeft;
       }
 
@@ -461,6 +477,9 @@ const RoomsFilter = (function () {
   }
 
   function init() {
+    // Enable footer link interceptor globally across all pages
+    setupFooterCategoryInterceptors();
+
     containerEl = document.getElementById("rooms-grid-container");
     countEl = document.getElementById("rooms-count-display");
     if (!containerEl) return;
@@ -480,11 +499,10 @@ const RoomsFilter = (function () {
       applyFilters();
     });
 
-    // Footer category link interceptors
-    setupFooterCategoryInterceptors();
-
-    // Check URL parameters for direct category or room filtering (?category=... or ?room=...)
-    const hasCategoryQuery = window.location.search.includes("category=") || window.location.search.includes("room=");
+    // Check URL parameters for direct category or room filtering (?category=... or ?room=... or hash)
+    const hasCategoryQuery = window.location.search.includes("category=") || 
+                             window.location.search.includes("room=") ||
+                             (window.location.hash && window.location.hash.includes("category="));
     if (hasCategoryQuery) {
       handleUrlParams(true);
     } else {

@@ -129,6 +129,93 @@ const Navigation = (function () {
     });
   }
 
+  function updateAllPricesOnPage(curr) {
+    if (typeof ROOMS_DATA === "undefined" || !ROOMS_DATA.length) return;
+    const isINR = curr === "INR";
+    const sym = isINR ? "₹" : "$";
+
+    // 1. All room cards on page (.room-card)
+    const cards = document.querySelectorAll(".room-card");
+    cards.forEach((card) => {
+      let rId = card.getAttribute("data-room-id");
+      if (!rId) {
+        const pEl = card.querySelector("[data-room-price]");
+        if (pEl) rId = pEl.getAttribute("data-room-price");
+      }
+      if (rId === "family-room") rId = "family-quad";
+
+      const room = ROOMS_DATA.find((r) => r.id === rId);
+      if (room) {
+        const pAmount = card.querySelector(".price-amount");
+        if (pAmount) {
+          const rate = isINR ? (room.startingPriceINR || room.weekdayRateINR) : (room.startingPrice || room.weekdayRate);
+          pAmount.textContent = `${sym}${rate.toLocaleString()}`;
+        }
+        const pWeekend = card.querySelector(".price-weekend");
+        if (pWeekend) {
+          const wRate = isINR ? room.weekendRateINR : room.weekendRate;
+          pWeekend.textContent = `Weekend: ${sym}${wRate.toLocaleString()}`;
+        }
+      }
+    });
+
+    // 2. Elements with explicit data-room-price / data-room-weekend
+    document.querySelectorAll("[data-room-price]").forEach((el) => {
+      let rId = el.getAttribute("data-room-price");
+      if (rId === "family-room") rId = "family-quad";
+      const room = ROOMS_DATA.find((r) => r.id === rId);
+      if (room) {
+        const p = isINR ? (room.startingPriceINR || room.weekdayRateINR) : (room.startingPrice || room.weekdayRate);
+        el.textContent = `${sym}${p.toLocaleString()}`;
+      }
+    });
+
+    document.querySelectorAll("[data-room-weekend]").forEach((el) => {
+      let rId = el.getAttribute("data-room-weekend");
+      if (rId === "family-room") rId = "family-quad";
+      const room = ROOMS_DATA.find((r) => r.id === rId);
+      if (room) {
+        const wp = isINR ? room.weekendRateINR : room.weekendRate;
+        el.textContent = `Weekend: ${sym}${wp.toLocaleString()}`;
+      }
+    });
+
+    // 3. Tariff comparison table in rooms.html
+    const tariffRows = document.querySelectorAll(".tariff-table tbody tr");
+    tariffRows.forEach((row) => {
+      const link = row.querySelector('a[href*="contact.html?room="]');
+      if (!link) return;
+      let rId = null;
+      try {
+        const url = new URL(link.href, window.location.origin);
+        rId = url.searchParams.get("room");
+      } catch (e) {
+        const match = link.href.match(/room=([^&]+)/);
+        if (match) rId = match[1];
+      }
+      if (rId === "family-room") rId = "family-quad";
+      const room = ROOMS_DATA.find((r) => r.id === rId);
+      if (room) {
+        const cells = row.querySelectorAll("td");
+        if (cells.length >= 6) {
+          if (isINR) {
+            cells[3].innerHTML = `<strong>₹${room.weekdayRateINR.toLocaleString()}</strong> <small style="color: var(--text-muted); font-size: 0.8rem;">($${room.weekdayRate})</small>`;
+            cells[4].innerHTML = `₹${room.weekendRateINR.toLocaleString()} <small style="color: var(--text-muted); font-size: 0.8rem;">($${room.weekendRate})</small>`;
+            if (cells[5].textContent.trim() !== "N/A" && room.extraBedRateINR) {
+              cells[5].textContent = `₹${room.extraBedRateINR.toLocaleString()}`;
+            }
+          } else {
+            cells[3].innerHTML = `<strong>$${room.weekdayRate}</strong> <small style="color: var(--text-muted); font-size: 0.8rem;">(₹${room.weekdayRateINR.toLocaleString()})</small>`;
+            cells[4].innerHTML = `$${room.weekendRate} <small style="color: var(--text-muted); font-size: 0.8rem;">(₹${room.weekendRateINR.toLocaleString()})</small>`;
+            if (cells[5].textContent.trim() !== "N/A" && room.extraBedRate) {
+              cells[5].textContent = `$${room.extraBedRate}`;
+            }
+          }
+        }
+      }
+    });
+  }
+
   function setupCurrencySwitcher() {
     const toggles = document.querySelectorAll(".currency-toggle-btn");
     const current = typeof Storage !== "undefined" ? Storage.getCurrency() : "USD";
@@ -138,11 +225,15 @@ const Navigation = (function () {
         const label = btn.querySelector(".curr-label");
         if (label) {
           label.textContent = curr === "INR" ? "₹ INR" : "$ USD";
+        } else {
+          btn.innerHTML = `<span class="curr-label">${curr === "INR" ? "₹ INR" : "$ USD"}</span>`;
         }
+        btn.setAttribute("title", curr === "INR" ? "Switch Currency (Current: ₹ INR - click for $ USD)" : "Switch Currency (Current: $ USD - click for ₹ INR)");
       });
     }
 
     updateLabels(current);
+    updateAllPricesOnPage(current);
 
     toggles.forEach((btn) => {
       btn.addEventListener("click", (e) => {
@@ -155,12 +246,19 @@ const Navigation = (function () {
         }
 
         updateLabels(next);
+        updateAllPricesOnPage(next);
         window.dispatchEvent(new CustomEvent("haven:currencyChange", { detail: { currency: next } }));
 
         if (typeof Toast !== "undefined") {
-          Toast.info(`Currency displayed in ${next === "INR" ? "Indian Rupee (₹)" : "US Dollar ($)"}`);
+          Toast.info(`Prices updated to ${next === "INR" ? "Indian Rupee (₹)" : "US Dollar ($)"}`);
         }
       });
+    });
+
+    window.addEventListener("haven:currencyChange", (e) => {
+      const curr = e.detail?.currency || (typeof Storage !== "undefined" ? Storage.getCurrency() : "USD");
+      updateLabels(curr);
+      updateAllPricesOnPage(curr);
     });
   }
 

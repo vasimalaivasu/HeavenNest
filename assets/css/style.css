@@ -5024,6 +5024,7 @@ select.form-control,
   gap: 1rem;
   font-size: 0.85rem;
   color: #64748B;
+  padding-inline-end: 4.75rem; /* Ensures legal links never get covered by fixed floating back-to-top button */
 }
 
 @media (max-width: 768px) {
@@ -5041,6 +5042,7 @@ select.form-control,
     text-align: center;
     gap: 0.65rem;
     padding-block: 1.15rem;
+    padding-inline-end: 0;
   }
   body:has(.mobile-bottom-bar) .footer-bottom {
     padding-block-end: calc(0.75rem + 60px);
@@ -5053,7 +5055,9 @@ select.form-control,
 
 .footer-legal-links {
   display: flex;
-  gap: 1.25rem;
+  gap: 1.35rem;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .footer-legal-links a {
@@ -5108,12 +5112,198 @@ select.form-control,
 }
 
 /* ==========================================================================
-   RTL LOGICAL ADJUSTMENTS
+   RTL LOGICAL ADJUSTMENTS & BIDIRECTIONAL TEXT PRESERVATION
+   Fixes Unicode Bidirectional Algorithm (UBA) issue where neutral punctuation
+   (periods, question marks, exclamation marks, colons) at sentence ends
+   incorrectly resolved to the physical line end (beginning) in RTL mode.
    ========================================================================== */
 [dir="rtl"] {
   text-align: right;
 }
 
+/* Ensure all text-containing elements and containers evaluate English/Latin sentences with natural LTR embedding
+   so trailing periods, exclamation marks, colons, and question marks stay at the end of the sentence */
+[dir="rtl"] p,
+[dir="rtl"] span,
+[dir="rtl"] a,
+[dir="rtl"] li,
+[dir="rtl"] dt,
+[dir="rtl"] dd,
+[dir="rtl"] blockquote,
+[dir="rtl"] figcaption,
+[dir="rtl"] label,
+[dir="rtl"] strong,
+[dir="rtl"] b,
+[dir="rtl"] em,
+[dir="rtl"] i,
+[dir="rtl"] small,
+[dir="rtl"] h1,
+[dir="rtl"] h2,
+[dir="rtl"] h3,
+[dir="rtl"] h4,
+[dir="rtl"] h5,
+[dir="rtl"] h6,
+[dir="rtl"] button,
+[dir="rtl"] summary,
+[dir="rtl"] details,
+[dir="rtl"] input,
+[dir="rtl"] textarea,
+[dir="rtl"] select,
+[dir="rtl"] td,
+[dir="rtl"] th,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .hero-subtitle,
+[dir="rtl"] .hero-split-title,
+[dir="rtl"] .hero-split-desc,
+[dir="rtl"] .section-title,
+[dir="rtl"] .section-subtitle,
+[dir="rtl"] .section-desc,
+[dir="rtl"] .room-card-title,
+[dir="rtl"] .room-card-desc,
+[dir="rtl"] .room-feature-item,
+[dir="rtl"] .facility-card,
+[dir="rtl"] .facility-card *,
+[dir="rtl"] .policy-item,
+[dir="rtl"] .policy-item *,
+[dir="rtl"] .accordion-item,
+[dir="rtl"] .accordion-item *,
+[dir="rtl"] .accordion-header,
+[dir="rtl"] .accordion-header *,
+[dir="rtl"] .accordion-panel,
+[dir="rtl"] .accordion-panel *,
+[dir="rtl"] .accordion-content,
+[dir="rtl"] .accordion-content *,
+[dir="rtl"] .accordion-body,
+[dir="rtl"] .accordion-body *,
+[dir="rtl"] .accordion-title,
+[dir="rtl"] .footer-text,
+[dir="rtl"] .footer-col,
+[dir="rtl"] .footer-col *,
+[dir="rtl"] .footer-bottom,
+[dir="rtl"] .footer-bottom *,
+[dir="rtl"] .haven-modal,
+[dir="rtl"] .haven-modal *,
+[dir="rtl"] .modal-dialog,
+[dir="rtl"] .modal-dialog *,
+[dir="rtl"] .modal-content-scroll,
+[dir="rtl"] .modal-content-scroll *,
+[dir="rtl"] .modal-article-body,
+[dir="rtl"] .modal-article-body *,
+[dir="rtl"] .testimonial-card,
+[dir="rtl"] .testimonial-card *,
+[dir="rtl"] .testimonial-text,
+[dir="rtl"] .review-comment,
+[dir="rtl"] .meta-desc,
+[dir="rtl"] .ticker-text,
+[dir="rtl"] .info-item,
+[dir="rtl"] .info-item *,
+[dir="rtl"] .info-list-item,
+[dir="rtl"] .feature-text,
+[dir="rtl"] .feature-desc,
+[dir="rtl"] .transit-desc,
+[dir="rtl"] .about-lead,
+[dir="rtl"] .badge,
+[dir="rtl"] .chip,
+[dir="rtl"] .spec-pill,
+[dir="rtl"] .icon-tag,
+[dir="rtl"] .room-benefit-tag,
+[dir="rtl"] .blog-card,
+[dir="rtl"] .blog-card *,
+[dir="rtl"] .form-group,
+[dir="rtl"] .form-group *,
+[dir="rtl"] .form-label,
+[dir="rtl"] .form-error,
+[dir="rtl"] .field-note,
+[dir="rtl"] .toast-message,
+[dir="rtl"] .card,
+[dir="rtl"] .card * {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
+
+/* Explicit Centering for Section Headers & Centered Elements in RTL */
+[dir="rtl"] .section-header,
+[dir="rtl"] .section-header h2,
+[dir="rtl"] .section-header p,
+[dir="rtl"] .hero-content,
+[dir="rtl"] .hero-content h1,
+[dir="rtl"] .hero-content p,
+[dir="rtl"] .hero-content .hero-subtitle,
+[dir="rtl"] .text-center,
+[dir="rtl"] .stat-card,
+[dir="rtl"] .stat-card h3,
+[dir="rtl"] .stat-card p,
+[dir="rtl"] .stat-number,
+[dir="rtl"] .stat-label {
+  text-align: center !important;
+}
+
+/* Strict LTR Isolation for Numbers, Rates, Phones, Emails, and Math */
+[dir="rtl"] .stat-number,
+[dir="rtl"] .price-amount,
+[dir="rtl"] .price-weekend,
+[dir="rtl"] .rate-primary,
+[dir="rtl"] .ticker-rate,
+[dir="rtl"] .estimate-highlight,
+[dir="rtl"] .estimate-inr,
+[dir="rtl"] .calc-live-total,
+[dir="rtl"] .calc-inr-note,
+[dir="rtl"] a[href^="tel:"],
+[dir="rtl"] a[href^="mailto:"],
+[dir="rtl"] .tel,
+[dir="rtl"] .phone-number,
+[dir="rtl"] .contact-phone {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+}
+
+/* Form Controls & Scrolling Room Ticker in RTL */
+[dir="rtl"] .room-category-ticker {
+  direction: ltr;
+}
+
+[dir="rtl"] .room-ticker-track {
+  direction: ltr;
+}
+
+[dir="rtl"] .form-field-control,
+[dir="rtl"] .form-control {
+  text-align: start;
+}
+
+/* Calculator & Estimation Receipt Rows in RTL */
+[dir="rtl"] .calc-summary-row,
+[dir="rtl"] .calc-summary-row span,
+[dir="rtl"] .calc-summary-total,
+[dir="rtl"] .calc-summary-total span,
+[dir="rtl"] .calc-summary-total-label,
+[dir="rtl"] .calc-summary-price-note,
+[dir="rtl"] .calc-addon-info,
+[dir="rtl"] .calc-addon-info span,
+[dir="rtl"] .estimate-meta,
+[dir="rtl"] .estimate-meta span,
+[dir="rtl"] .estimate-meta small {
+  unicode-bidi: plaintext;
+}
+
+[dir="rtl"] .calc-summary-row strong,
+[dir="rtl"] .calc-summary-row span:last-child,
+[dir="rtl"] #calc-summary-duration,
+[dir="rtl"] #calc-summary-room-rate,
+[dir="rtl"] #calc-summary-total,
+[dir="rtl"] #calc-summary-grand-total,
+[dir="rtl"] .calc-summary-price,
+[dir="rtl"] .calc-addon-price,
+[dir="rtl"] .currency-toggle-btn,
+[dir="rtl"] .currency-current,
+[dir="rtl"] #enquiry-nights-count {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: inline-block;
+}
+
+/* Interactive Component Icons & Nav in RTL */
 [dir="rtl"] .accordion-icon {
   transform: rotate(0deg);
 }
@@ -5124,6 +5314,13 @@ select.form-control,
 
 [dir="rtl"] .lightbox-prev-btn svg,
 [dir="rtl"] .lightbox-next-btn svg {
+  transform: scaleX(-1);
+}
+
+[dir="rtl"] .btn-text svg,
+[dir="rtl"] .btn-outline svg,
+[dir="rtl"] .btn-primary svg,
+[dir="rtl"] .breadcrumb-separator svg {
   transform: scaleX(-1);
 }
 

@@ -6,6 +6,7 @@
 const ModalManager = (function () {
   let modalEl = null;
   let previousActiveElement = null;
+  let currentRoomId = null;
 
   function createModalDOM() {
     if (modalEl) return;
@@ -53,6 +54,7 @@ const ModalManager = (function () {
       return;
     }
 
+    currentRoomId = roomId;
     createModalDOM();
     previousActiveElement = document.activeElement;
 
@@ -272,6 +274,7 @@ const ModalManager = (function () {
 
   function close() {
     if (!modalEl) return;
+    currentRoomId = null;
     modalEl.classList.remove("active");
     document.body.classList.remove("modal-open");
     if (previousActiveElement && previousActiveElement.focus) {
@@ -286,6 +289,12 @@ const ModalManager = (function () {
         e.preventDefault();
         const roomId = trigger.getAttribute("data-modal-room");
         openRoomDetails(roomId);
+      }
+    });
+
+    window.addEventListener("haven:currencyChange", () => {
+      if (modalEl && modalEl.classList.contains("active") && currentRoomId) {
+        openRoomDetails(currentRoomId);
       }
     });
   }

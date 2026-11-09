@@ -271,13 +271,6 @@
             <option value="budget-twin">Budget Twin Room (AC)</option>
             <option value="triple-sharing">Triple Sharing Room (AC)</option>
           </select>
-          <!-- Live Animated Scrolling Room Ticker -->
-          <div class="room-category-ticker" id="qb-room-ticker" aria-hidden="true">
-            <div class="room-ticker-track" id="qb-ticker-track">
-              <span class="room-ticker-item" id="qb-ticker-item-1"></span>
-              <span class="room-ticker-item" id="qb-ticker-item-2"></span>
-            </div>
-          </div>
         </div>
 
         <div class="form-field-group">
@@ -298,6 +291,14 @@
           </button>
         </div>
       </form>
+
+      <!-- Live Animated Scrolling Room Ticker (Full Width underneath form) -->
+      <div class="room-category-ticker" id="qb-room-ticker" aria-hidden="true" style="margin-top: 0.85rem;">
+        <div class="room-ticker-track" id="qb-ticker-track">
+          <span class="room-ticker-item" id="qb-ticker-item-1"></span>
+          <span class="room-ticker-item" id="qb-ticker-item-2"></span>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -376,10 +377,10 @@
               <div class="room-price-block">
                 <span class="price-from">Starts from</span>
                 <div class="price-value-row">
-                  <span class="price-amount">$24</span>
+                  <span class="price-amount" data-room-price="economy-single">$24</span>
                   <span class="price-period">/ night</span>
                 </div>
-                <span class="price-weekend">Weekend: $28</span>
+                <span class="price-weekend" data-room-weekend="economy-single">Weekend: $28</span>
               </div>
               <div class="room-card-actions">
                 <button type="button" class="btn btn-outline-sm" data-modal-room="economy-single">View Details</button>
@@ -422,10 +423,10 @@
               <div class="room-price-block">
                 <span class="price-from">Starts from</span>
                 <div class="price-value-row">
-                  <span class="price-amount">$32</span>
+                  <span class="price-amount" data-room-price="standard-double">$32</span>
                   <span class="price-period">/ night</span>
                 </div>
-                <span class="price-weekend">Weekend: $36</span>
+                <span class="price-weekend" data-room-weekend="standard-double">Weekend: $36</span>
               </div>
               <div class="room-card-actions">
                 <button type="button" class="btn btn-outline-sm" data-modal-room="standard-double">View Details</button>
@@ -468,10 +469,10 @@
               <div class="room-price-block">
                 <span class="price-from">Starts from</span>
                 <div class="price-value-row">
-                  <span class="price-amount">$39</span>
+                  <span class="price-amount" data-room-price="deluxe-double">$39</span>
                   <span class="price-period">/ night</span>
                 </div>
-                <span class="price-weekend">Weekend: $45</span>
+                <span class="price-weekend" data-room-weekend="deluxe-double">Weekend: $45</span>
               </div>
               <div class="room-card-actions">
                 <button type="button" class="btn btn-outline-sm" data-modal-room="deluxe-double">View Details</button>

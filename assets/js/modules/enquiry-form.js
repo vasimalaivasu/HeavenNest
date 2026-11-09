@@ -93,18 +93,26 @@ const EnquiryEngine = (function () {
     STATE.hasBreakfast = hasBreakfast;
 
     const currency = typeof Storage !== "undefined" ? Storage.getCurrency() : "USD";
+    const isINR = currency === "INR";
 
-    if (estimateUSDDisplay) {
-      estimateUSDDisplay.textContent = `$${totalUSD}`;
-    }
-    if (estimateINRDisplay) {
-      estimateINRDisplay.textContent = `₹${totalINR.toLocaleString()}`;
+    if (estimateUSDDisplay && estimateINRDisplay) {
+      if (isINR) {
+        estimateINRDisplay.textContent = `₹${totalINR.toLocaleString()}`;
+        estimateINRDisplay.className = "estimate-highlight";
+        estimateUSDDisplay.textContent = `$${totalUSD}`;
+        estimateUSDDisplay.className = "estimate-inr";
+      } else {
+        estimateUSDDisplay.textContent = `$${totalUSD}`;
+        estimateUSDDisplay.className = "estimate-highlight";
+        estimateINRDisplay.textContent = `₹${totalINR.toLocaleString()}`;
+        estimateINRDisplay.className = "estimate-inr";
+      }
     }
     if (roomRateBadge) {
       const bText = hasBreakfast 
-        ? (currency === "INR" ? ` + ₹${breakfastINR} b'fast` : ` + $${breakfastUSD} b'fast`)
+        ? (isINR ? ` + ₹${breakfastINR} b'fast` : ` + $${breakfastUSD} b'fast`)
         : "";
-      roomRateBadge.textContent = currency === "INR" 
+      roomRateBadge.textContent = isINR 
         ? `₹${room.weekdayRateINR} / night × ${STATE.nights}n × ${STATE.rooms}r${bText}` 
         : `$${room.weekdayRate} / night × ${STATE.nights}n × ${STATE.rooms}r${bText}`;
     }
@@ -571,6 +579,11 @@ Please confirm room availability. Thank you!`;
     // Auto save draft on typing
     formEl.addEventListener("input", saveDraft);
     formEl.addEventListener("submit", handleSubmit);
+
+    // Listen to global currency change
+    window.addEventListener("haven:currencyChange", () => {
+      updateEstimate();
+    });
   }
 
   return {

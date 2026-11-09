@@ -644,7 +644,7 @@
         </article>
 
         <!-- Room 4: Family Quad Suite (family) -->
-        <article class="room-card" data-styles="family" data-room-id="family-room">
+        <article class="room-card" data-styles="family" data-room-id="family-quad">
           <div class="room-card-media">
             <img src="https://images.unsplash.com/photo-1578683010236-d716f9a3f461?auto=format&fit=crop&w=1000&q=80" alt="Family Quad Suite at HavenNest" class="room-card-img" loading="lazy" />
             <div class="room-card-badges">
@@ -686,14 +686,14 @@
               <div class="room-price-block">
                 <span class="price-from">Starts from</span>
                 <div class="price-value-row">
-                  <span class="price-amount" data-room-price="family-room">$55</span>
+                  <span class="price-amount" data-room-price="family-quad">$52</span>
                   <span class="price-period">/ night</span>
                 </div>
-                <span class="price-weekend" data-room-weekend="family-room">Weekend: $62</span>
+                <span class="price-weekend" data-room-weekend="family-quad">Weekend: $59</span>
               </div>
               <div class="room-card-actions">
-                <button type="button" class="btn btn-outline-sm" data-modal-room="family-room">View Details</button>
-                <a href="contact.html?room=family-room" class="btn btn-primary-sm">Enquire</a>
+                <button type="button" class="btn btn-outline-sm" data-modal-room="family-quad">View Details</button>
+                <a href="contact.html?room=family-quad" class="btn btn-primary-sm">Enquire</a>
               </div>
             </div>
           </div>
@@ -1855,16 +1855,18 @@
         const weekendEls = document.querySelectorAll("[data-room-weekend]");
 
         priceEls.forEach((el) => {
-          const rId = el.getAttribute("data-room-price");
+          let rId = el.getAttribute("data-room-price");
+          if (rId === "family-room") rId = "family-quad";
           const r = ROOMS_DATA.find((x) => x.id === rId);
           if (r) {
-            const p = curr === "INR" ? r.startingPriceINR : r.startingPrice;
+            const p = curr === "INR" ? (r.startingPriceINR || r.weekdayRateINR) : (r.startingPrice || r.weekdayRate);
             el.textContent = `${sym}${p.toLocaleString()}`;
           }
         });
 
         weekendEls.forEach((el) => {
-          const rId = el.getAttribute("data-room-weekend");
+          let rId = el.getAttribute("data-room-weekend");
+          if (rId === "family-room") rId = "family-quad";
           const r = ROOMS_DATA.find((x) => x.id === rId);
           if (r) {
             const wp = curr === "INR" ? r.weekendRateINR : r.weekendRate;
