@@ -89,8 +89,10 @@
       </nav>
       <div class="navbar-actions">
         <!-- Currency Switcher -->
-        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
-          <span class="curr-label">$ USD</span>
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Select Currency" title="Select Currency ($ USD / ₹ INR)">
+          <span class="curr-opt curr-opt-usd active" role="button" tabindex="0">$ USD</span>
+          <span class="curr-opt-divider">/</span>
+          <span class="curr-opt curr-opt-inr" role="button" tabindex="0">₹ INR</span>
         </button>
 
         <!-- LTR / RTL Toggle -->
@@ -133,8 +135,10 @@
     <div class="drawer-body">
       <!-- Mobile Quick Controls -->
       <div class="drawer-controls-row">
-        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
-          <span class="curr-label">$ USD</span>
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Select Currency" title="Select Currency ($ USD / ₹ INR)">
+          <span class="curr-opt curr-opt-usd active" role="button" tabindex="0">$ USD</span>
+          <span class="curr-opt-divider">/</span>
+          <span class="curr-opt curr-opt-inr" role="button" tabindex="0">₹ INR</span>
         </button>
         <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
           <span class="rtl-label">RTL</span>

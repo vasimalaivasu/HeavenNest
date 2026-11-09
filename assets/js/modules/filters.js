@@ -68,10 +68,10 @@ const RoomsFilter = (function () {
             <div class="room-price-block">
               <span class="price-from">Starts from</span>
               <div class="price-value-row">
-                <span class="price-amount">${currSym}${weekdayRate}</span>
+                <span class="price-amount" data-room-price="${room.id}">${currSym}${weekdayRate}</span>
                 <span class="price-period">/ night</span>
               </div>
-              <span class="price-weekend">Weekend: ${currSym}${weekendRate}</span>
+              <span class="price-weekend" data-room-weekend="${room.id}">Weekend: ${currSym}${weekendRate}</span>
             </div>
 
             <div class="room-card-actions">

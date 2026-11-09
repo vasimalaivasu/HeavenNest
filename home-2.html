@@ -92,8 +92,10 @@
       <!-- Desktop Controls & Actions -->
       <div class="navbar-actions">
         <!-- Currency Switcher -->
-        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency" title="Switch Currency ($ / ₹)">
-          <span class="curr-label">$ USD</span>
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Select Currency" title="Select Currency ($ USD / ₹ INR)">
+          <span class="curr-opt curr-opt-usd active" role="button" tabindex="0">$ USD</span>
+          <span class="curr-opt-divider">/</span>
+          <span class="curr-opt curr-opt-inr" role="button" tabindex="0">₹ INR</span>
         </button>
 
         <!-- LTR / RTL Toggle -->
@@ -140,8 +142,10 @@
     <div class="drawer-body">
       <!-- Mobile Quick Controls -->
       <div class="drawer-controls-row">
-        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Toggle Currency">
-          <span class="curr-label">$ USD</span>
+        <button type="button" class="nav-control-btn currency-toggle-btn" aria-label="Select Currency" title="Select Currency ($ USD / ₹ INR)">
+          <span class="curr-opt curr-opt-usd active" role="button" tabindex="0">$ USD</span>
+          <span class="curr-opt-divider">/</span>
+          <span class="curr-opt curr-opt-inr" role="button" tabindex="0">₹ INR</span>
         </button>
         <button type="button" class="nav-control-btn rtl-toggle-btn" aria-label="Toggle RTL layout">
           <span class="rtl-label">RTL</span>
@@ -466,9 +470,6 @@
           </div>
           <button type="button" class="filter-scroll-btn filter-scroll-next" id="stay-filter-next" aria-label="Scroll style tabs right" title="Scroll right">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
-          </button>
-          <button type="button" class="filter-scroll-btn filter-autoscroll-toggle" id="stay-autoscroll-toggle" aria-label="Pause auto-scrolling filters" title="Pause auto-scroll">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
           </button>
         </div>
       </div>

@@ -8,17 +8,16 @@ const Navigation = (function () {
     const navbar = document.querySelector(".haven-navbar");
     if (!navbar) return;
 
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (window.scrollY > 40) {
-          navbar.classList.add("scrolled");
-        } else {
-          navbar.classList.remove("scrolled");
-        }
-      },
-      { passive: true }
-    );
+    function updateNavbarScroll() {
+      if (window.scrollY > 20) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
+
+    window.addEventListener("scroll", updateNavbarScroll, { passive: true });
+    updateNavbarScroll();
   }
 
   function setupMobileDrawer() {
@@ -220,44 +219,89 @@ const Navigation = (function () {
     const toggles = document.querySelectorAll(".currency-toggle-btn");
     const current = typeof Storage !== "undefined" ? Storage.getCurrency() : "USD";
 
-    function updateLabels(curr) {
+    function updateActiveState(curr) {
       toggles.forEach((btn) => {
+        let usdOpt = btn.querySelector(".curr-opt-usd");
+        let inrOpt = btn.querySelector(".curr-opt-inr");
+
+        if (!usdOpt || !inrOpt) {
+          btn.innerHTML = `
+            <span class="curr-opt curr-opt-usd ${curr === "USD" ? "active" : ""}" role="button" tabindex="0">$ USD</span>
+            <span class="curr-opt-divider">/</span>
+            <span class="curr-opt curr-opt-inr ${curr === "INR" ? "active" : ""}" role="button" tabindex="0">₹ INR</span>
+          `;
+          usdOpt = btn.querySelector(".curr-opt-usd");
+          inrOpt = btn.querySelector(".curr-opt-inr");
+        } else {
+          if (curr === "INR") {
+            usdOpt.classList.remove("active");
+            inrOpt.classList.add("active");
+            usdOpt.setAttribute("aria-selected", "false");
+            inrOpt.setAttribute("aria-selected", "true");
+          } else {
+            usdOpt.classList.add("active");
+            inrOpt.classList.remove("active");
+            usdOpt.setAttribute("aria-selected", "true");
+            inrOpt.setAttribute("aria-selected", "false");
+          }
+        }
+
         const label = btn.querySelector(".curr-label");
         if (label) {
           label.textContent = curr === "INR" ? "₹ INR" : "$ USD";
-        } else {
-          btn.innerHTML = `<span class="curr-label">${curr === "INR" ? "₹ INR" : "$ USD"}</span>`;
         }
-        btn.setAttribute("title", curr === "INR" ? "Switch Currency (Current: ₹ INR - click for $ USD)" : "Switch Currency (Current: $ USD - click for ₹ INR)");
+
+        btn.setAttribute(
+          "title",
+          curr === "INR"
+            ? "Selected currency: ₹ INR (Click $ USD to view in Dollars)"
+            : "Selected currency: $ USD (Click ₹ INR to view in Rupees)"
+        );
+        btn.setAttribute("aria-label", `Current currency is ${curr}. Click to switch.`);
       });
     }
 
-    updateLabels(current);
+    updateActiveState(current);
     updateAllPricesOnPage(current);
 
     toggles.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
         const prev = typeof Storage !== "undefined" ? Storage.getCurrency() : "USD";
-        const next = prev === "USD" ? "INR" : "USD";
+        let targetCurr = null;
 
-        if (typeof Storage !== "undefined") {
-          Storage.setCurrency(next);
+        // Check if user specifically clicked the USD or INR option span
+        const targetOpt = e.target.closest(".curr-opt");
+        if (targetOpt) {
+          if (targetOpt.classList.contains("curr-opt-usd")) {
+            targetCurr = "USD";
+          } else if (targetOpt.classList.contains("curr-opt-inr")) {
+            targetCurr = "INR";
+          }
         }
 
-        updateLabels(next);
-        updateAllPricesOnPage(next);
-        window.dispatchEvent(new CustomEvent("haven:currencyChange", { detail: { currency: next } }));
+        // If clicked on button wrapper, toggle to opposite
+        if (!targetCurr) {
+          targetCurr = prev === "USD" ? "INR" : "USD";
+        }
+
+        if (typeof Storage !== "undefined") {
+          Storage.setCurrency(targetCurr);
+        }
+
+        updateActiveState(targetCurr);
+        updateAllPricesOnPage(targetCurr);
+        window.dispatchEvent(new CustomEvent("haven:currencyChange", { detail: { currency: targetCurr } }));
 
         if (typeof Toast !== "undefined") {
-          Toast.info(`Prices updated to ${next === "INR" ? "Indian Rupee (₹)" : "US Dollar ($)"}`);
+          Toast.info(`Prices updated to ${targetCurr === "INR" ? "Indian Rupee (₹)" : "US Dollar ($)"}`);
         }
       });
     });
 
     window.addEventListener("haven:currencyChange", (e) => {
       const curr = e.detail?.currency || (typeof Storage !== "undefined" ? Storage.getCurrency() : "USD");
-      updateLabels(curr);
+      updateActiveState(curr);
       updateAllPricesOnPage(curr);
     });
   }
